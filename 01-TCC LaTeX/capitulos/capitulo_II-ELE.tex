@@ -1,0 +1,147 @@
+\chapter{Algoritmos Genéticos}\label{chap:AG}
+
+\section{Introdução}\label{sec.intro_AG}
+
+Os Algoritmos Genéticos (AG) são métodos de busca ou de otimização baseados em mecanismos que procuram imitar o processo de evolução natural das espécies. A seleção natural e a reprodução são as duas forças que, em conjunto, direcionam esta evolução. Na natureza, a competição entre indivíduos resulta na sobrevivência dos mais aptos. Nesse processo, os genes dos elementos mais adaptados se perpetuarão, por consequência, a reprodução de indivíduos produzirá a recombinação de seus materiais genéticos, levando a um novo grupo de indivíduos e a um novo grupo de genes.
+
+Os Algoritmos Genéticos são muito utilizados em problemas onde, dado um conjunto de indivíduos, deseja-se encontrar aquele que melhor atenda a certas condições previamente especificadas, sendo que cada indivíduo representa uma possível solução para o problema. O que o AG faz é procurar a melhor solução, visando a otimização de uma função especificada, denominada função objetivo. As principais diferenças entre o AG e os principais métodos tradicionais de busca da solução ótima são:
+
+\begin{itemize}
+  \item Procuram uma população de pontos e não apenas um único ponto;
+  \item Utilizam uma função objetivo diretamente como direção de busca e não derivadas ou outro tipo de conhecimento auxiliar;
+  \item Utilizam regras de transição probabilísticas e não determinísticas;
+  \item Operam num espaço de busca codificado e não diretamente no espaço de busca.
+\end{itemize}
+
+Inspirado na maneira como o darwinismo explica o processo de evolução das espécies, (HOLLAND, 1975) decompôs o funcionamento dos AG nas etapas de inicialização, avaliação, seleção, cruzamento, mutação, atualização e finalização. Resumidamente, assim foram definidas cada etapa:
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=1]{Imagens/Capitulo_II/Figura_21.png}
+  \caption{Esquema de um AG}\label{fig.esquema_do_AG}
+\end{figure}
+
+\begin{itemize}
+  \item \textbf{Avaliação:} avalia-se a aptidão das soluções (indivíduos da população), onde é feita uma análise para que se estabeleçam quão bem elas respondem ao problema proposto;
+  \item \textbf{Seleção:} indivíduos são selecionados para a reprodução. A probabilidade de uma dada solução i ser selecionada é proporcional à sua aptidão;
+  \item \textbf{Cruzamento:} características das soluções escolhidas são recombinadas, gerando novos indivíduos;
+  \item \textbf{Mutação:} características dos indivíduos resultantes do processo de reprodução são alteradas, acrescentando assim variedade à população;
+  \item \textbf{Atualização:} os indivíduos criados nesta geração são inseridos na população;
+  \item \textbf{Finalização:} verifica se as condições de encerramento da evolução foram atingidas, retornando para a etapa de avaliação em caso negativo e encerrando a execução em caso positivo.
+\end{itemize}
+
+Ao contrário de outros métodos que realizam a busca examinando um ponto de cada vez, os AG são beneficiados pelo fato de operarem sobre um conjunto de pontos (indivíduos), reduzindo a probabilidade de encontrar um falso máximo global, ou seja, um máximo local. Este conjunto de pontos codificados segundo a representação definida é denominado de população.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=1.25]{Imagens/Capitulo_II/Figura_22.png}
+  \caption{Exemplo da localização de máximos locais e máximo global}\label{fig.max_global}
+\end{figure}
+
+
+\section{Estrutura de Codificação}\label{sec.Estrut_cod}
+
+Um AG processa populações de cromossomos. Um cromossomo é uma estrutura de dados, geralmente vetor ou cadeia de bits que representa uma possível solução do problema a ser otimizado. Gene é o termo utilizado para definir uma unidade desse cromossomo (em cadeia de bits, gene corresponderia a um único bit). Em geral, um cromossomo representa um conjunto de parâmetros da função objetivo, ou seja, é a representação dessa função, cuja resposta será maximizada ou minimizada. O conjunto de todas as configurações que o cromossomo pode assumir forma o seu espaço de busca. Se o cromossomo representa n parâmetros de uma função, então o espaço de busca é um espaço com n dimensões.
+
+A forma mais simples de codificação é feita através do código binário, onde cada cromossomo é representado por uma sequência de zeros e uns. Esse tipo de codificação apresenta inúmeras vantagens no decorrer do processo de otimização, como tornar as operações genéticas mais fáceis de serem executadas, tornar possível o trabalho com variáveis que assumam valores contínuos e facilitar a variação da faixa de trabalho dos parâmetros. Em problemas de otimização onde as variáveis assumem valores inteiros, a codificação do cromossomo fica simplificada. Dependendo do caso, é desnecessário fazer os procedimentos de codificação e decodificação, pois o número de caracteres escolhidos pode corresponder aos valores inteiros passíveis de serem assumidos pelas variáveis.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=0.75]{Imagens/Capitulo_II/Figura_23.png}
+  \caption{Cromossomo com codificação binária}\label{fig.cromo_bin}
+\end{figure}
+
+Para inicializar o AG, é necessário definir o número de cromossomos que são inicialmente gerados e sua estrutura.  Segundo (SPERANDIO, 2008) o tamanho da população ainda é uma heurística, a qual depende da experiência do usuário e do seu conhecimento sobre a função ou problema. Entretanto, é fato que quanto maior o número de cromossomos na população, maior será a probabilidade de convergência. Em contrapartida, o processamento para cada iteração, também será mais custoso.
+
+
+\section{Função de Aptidão}\label{sec.func_apt}
+
+Resumidamente, a função de aptidão serve para quantificar a qualidade de cada solução (cromossomo), para que dessa forma, seja a feita a comparação entre os cromossomos. Com a classificação de cada solução pela função de aptidão, é possível selecionar cada par para que sejam aplicados os operadores de reprodução e formar uma nova população.
+
+Existem várias formas de determinar a aptidão de um indivíduo, sendo a mais simples delas igualar o valor da aptidão ao valor da função objetivo. Outra forma de escolher essa aptidão é por ordenamento. Neste método, o melhor indivíduo (o valor mais alto da função objetivo, no caso de maximização) recebe um valor \emph{a} e o pior recebe um valor \emph{b}, onde \emph{a} é um valor máximo e\emph{ b} um valor mínimo. Por consequência, todos os outros valores entre \emph{a} e \emph{b} serão encontrados por interpolação da reta formada por ambos, assim define-se:
+
+\begin{equation}\label{eq.aptidao}
+  f_i = \frac{(b-a)\cdot(i-1)}{N-1}+a
+\end{equation}
+
+\noindent tal que, \emph{i} é a classificação o indivíduo e N o número de indivíduos da população.
+
+Para a maioria dos problemas, como o de alocação de chaves telecomandadas, por exemplo, existe ainda a inserção de restrições na função objetivo. Este processo é feito somando-se à função objetivo um fator de penalidade multiplicado por uma função penalidade, nos quais são atribuídas as restrições do problema. Assim, com o aumento (no caso de minimização) da função objetivo, a aptidão desse indivíduo fica prejudicada.
+
+Este procedimento é necessário quando algum parâmetro for violado e se deseja que uma função de penalidade atue, tornando este indivíduo inviável (FERREIRA, 2006). Um exemplo mais claro da aplicação dessa restrição seria a violação do DEC e FEC por parte de alguma solução. Isso implicaria que tal solução, mesmo com o valor original da função de aptidão (sem penalidade) representando uma boa solução, poderá ser descartada ou ter a probabilidade de cruzamento reduzida.
+
+
+ \section{Métodos de Seleção}\label{sec.metodo_sel}
+
+É o mecanismo que, através da função de Aptidão, seleciona uma parte da população a qual serão aplicados os operadores genéticos. A maioria das funções é baseada em processos estocásticos que visam permitir a seleção de certa quantidade de indivíduos com menor aptidão. Segundo (SPERANDIO, 2008), isso ajuda a manter a diversidade de soluções e evita uma convergência prematura do algoritmo para um ótimo local. Os principais métodos de seleção são: Ranking, Roleta e Torneio.
+
+No método \emph{Ranking} a população é classificada segundo o valor da função de aptidão, do mais apto ao menos apto. Em seguida, são atribuídas probabilidades a aptidão, de acordo com a posição em que cada solução se encontra na classificação da população.
+
+A seleção por torneio é baseada na competição de um subconjunto da população. Para tal, são escolhidos aleatoriamente (com probabilidades iguais) \emph{n} indivíduos da população, e o indivíduo com maior aptidão é selecionado para a população intermediária (\emph{mating pool}). O processo repete-se até que a população intermediária seja totalmente preenchida. Geralmente, quanto menor o tamanho da amostra, maior a chance de um cromossomo com menor aptidão vencer a seleção. Isso, como já foi salientado, ajuda a manter a população diversificada.
+
+O método Roleta pode ser dividido em dois tipos: simples e ponderada. No método simples, cada indivíduo da população é representado proporcionalmente à sua aptidão. Dessa forma, os cromossomos com alta aptidão, naturalmente, ocupam uma grande parte da roleta, enquanto que os de baixa aptidão, analogamente, ocupam uma pequena parte. A operação é repetida até que a população intermediária esteja completa. Esse tipo de roleta, como pode ser visto na figura \ref{fig.roleta_1}, aumenta a pressão seletiva na população, a partir do momento que diminui a chances de um indivíduo menos apto ser escolhido.
+
+ \begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=0.7]{Imagens/Capitulo_II/Figura_24.png}
+  \caption{Roleta simples}\label{fig.roleta_1}
+\end{figure}
+
+Já na roleta ponderada, tenta-se solucionar esse problema da alta pressão inicial da população. Para isso, a probabilidade de um indivíduo ser escolhido passa a ser função apenas da sua classificação (por ordem de aptidão) e não mais proporcional ao valor da função de aptidão.  É possível observar na figura \ref{fig.roleta_2} a melhora na probabilidade do indivíduo 1.
+
+ \begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=0.7]{Imagens/Capitulo_II/Figura_25.png}
+  \caption{Roleta Ponderada}\label{fig.roleta_2}
+\end{figure}
+
+Existe ainda outro mecanismo usado para seleção nos AG: o Elitismo. Embora não seja caracterizado como um método que seja usado isoladamente, consiste em copiar os melhores indivíduos de uma população para a geração seguinte, fazendo com que bons indivíduos não sejam perdidos com o processo evolutivo. Normalmente, o elitismo seleciona apenas o melhor indivíduo.
+
+
+\section{Operadores}\label{sec.operadores}
+
+O \emph{Crossover} (ou cruzamento) e a Mutação são os principais operadores usados em AG. Tal qual acontece na natureza, a função desses operadores é gerar novos indivíduos. Através da mistura do material genético de soluções existentes, o operador \emph{Crossover} procura gerar novos descendentes (novas soluções) com o material genético de ambos os ancestrais. Já a mutação, acontece aleatoriamente, tendo como função contribuir para a diversidade genética da população.
+
+O operador \emph{crossover} é aplicado a um par de cromossomos retirados da população intermediária, gerando dois cromossomos filhos. Cada um dos cromossomos pais tem sua cadeia de bits cortada em uma posição aleatória, produzindo duas ``cabeças'' e duas ``caudas''. As caudas são trocadas, gerando dois novos cromossomos. A figura \ref{fig.crossover} mostra como se dá a formação dos dois novos indivíduos.
+
+ \begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=0.85]{Imagens/Capitulo_II/Figura_26.png}
+  \caption{Crossover simples}\label{fig.crossover}
+\end{figure}
+
+ Há ainda outros tipos de \emph{crossover} que podem ser usados, tais como: cortes múltiplos, transferência proporcional e transferência por intersecção. O primeiro, ao invés de cortar os cromossomos pais em apenas um lugar, corta-os em múltiplos lugares, seguindo a mesma lógica. Já na transferência proporcional, determina-se o percentual de genes do ancestral com maior aptidão que se deseja transmitir aos descendentes. E por último, na transferência por intersecção, replica-se nos descendentes a parte comum entre os ancestrais e preenchem-se os demais genes de forma aleatória a partir do material restante nos ancestrais.
+
+É importante salientar que nem todo cromossomo escolhido para reprodução (através dos métodos de seleção mencionados na seção \ref{sec.metodo_sel}), sofrerá \emph{crossover}. Uma parte apenas irá ser copiada para a próxima geração. Essa definição de quem sofrerá ou não crossover é determinada pela taxa de \emph{crossover}. Segundo (KAGAN et al., 2009), essa taxa costuma ser fixada entre 60\% e 90\%.
+
+A Mutação tem como principal característica, ajudar para que o AG não fique preso a ótimos locais. Isso se dá devido ao fato que, com o \emph{crossover}, as novas soluções geradas ficam restritas à combinação das soluções já existentes. Porém, ao aplicar a mutação, pode ser inserido na população um cromossomo que foi perdido ao longo das gerações ou que ainda não havia sido gerado.
+
+A operação para aplicar a mutação em um cromossomo é simples. É necessário apenas escolher um indivíduo da população aleatoriamente e, também de forma aleatória, modificar um gene. O processo é exemplificado na figura \ref{fig.mut}. Assim como no \emph{crossover}, a mutação é regida por uma taxa, a taxa de mutação, a qual é fixada entre 0,1\% e 5\%.
+
+  \begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=0.85]{Imagens/Capitulo_II/Figura_27.png}
+  \caption{Mutação simples}\label{fig.mut}
+\end{figure}
+
+
+\section{Convergência}\label{sec.convergencia}
+
+Como todo algoritmo de otimização, é necessário definir como será o término do AG, ou seja, qual será o critério de parada. (SPERANDIO, 2008) afirma que é comum a função objetivo melhorar rapidamente nas primeiras iterações e então estagnar por longos períodos, o que pode prejudicar o desempenho do algoritmo e aumentar em demasia o tempo de processamento.
+
+Segundo (TENFEN, 2011), podem-se enumerar as condições de paradas mais comuns usadas para AG:
+
+\begin{itemize}
+  \item Solução atingiu um valor mínimo ou máximo admissível da função objetivo;
+  \item Valores de aptidão não melhoram após determinado número de gerações;
+  \item Atingido o número máximo de iterações arbitrado;
+  \item A frequência de um cromossomo na população é maior que 95\%;
+  \item Atingido o tempo máximo admitido de processamento.
+\end{itemize}

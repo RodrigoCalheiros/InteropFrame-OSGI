@@ -1,0 +1,46 @@
+\chapter{Introdução}\label{chap:introducao}
+
+\section{Considerações Iniciais} \label{sec.consideracos_iniciais}
+
+Um sistema distribuído é considerado aquele no qual os componentes localizados em computadores interligados em rede se comunicam e coordenam suas ações apenas passando mensagens. (COLOURIUS, 2007). Tem como objetivo adicionar o poder computacional de diversos computadores, interligados por uma rede, para compartilhar a execução de tarefas.
+
+O desenvolvimento de sistemas para este ambiente tem se tornado uma tarefa complexa, e como o número de recursos exigidos em sistemas distribuídos é crescente isso faz com que a complexidade no desenvolvimento dos sistemas aumente (Blair et al. 2011).  Uma abordagem utilizada para lidar com esse problema é o desenvolvimento baseado em componentes, que permite desenvolver software através da composição de componentes individuais com propósitos bem definidos, possibilitando aumentar a produtividade, reusabilidade e manutenabilidade do software.
+
+O uso da abordagem do desenvolvimento baseado em componentes traz consigo alguns problemas, como: a existência de inúmeros modelos diferentes de componentes para sistemas distribuídos, onde cada modelo possui sua especificidade do código técnico para o desenvolvimento de componentes e seu próprio padrão de desenvolvimento. O que exige do desenvolvedor o conhecimento especifico de características de cada modelo. Devido a diversidade de modelos a reusabilidade de componentes de software de modelos distintos é dificultada, uma vez que não há uma interoperabilidade nativa entre modelos de componentes heterogêneos.
+
+Para minimizar os problemas apresentados quanto ao desenvolvimento de sistemas distribuídos baseados em componentes, um framework para desenvolvimento em alto nível foi proposto em (SANTOS; ROCHA, 2013). Este framework visa disponibilizar um modelo de programação genérico que é fornecido ao desenvolvedor através de anotações no código de negócio da aplicação. Assim, componentes de modelos específicos são gerados a partir destas anotações, solução que livra o desenvolvedor de ter que conhecer detalhes técnicos de cada modelo que se deseja utilizar. Além disso, este framework retira do desenvolvedor a necessidade de conhecer métodos de comunicação remota distribuída, tratando a complexidade de desenvolvimento de objetos distribuídos. Chamado de HighFrame, ele é composto por um repositório, que fica situado em um servidor, que contém todos os componentes genéricos possibilitando assim a reutilização dos mesmos por diversos usuários; e por um Planejador Gráfico, que é a ferramenta na qual o desenvolvedor pode compor a arquitetura do sistema distribuído em alto nível.
+
+O framework destacado anteriormente apresenta um conjunto de recursos para minimizar a complexidade de desenvolvimento de sistemas distribuídos baseados em compoenentes. Porém, esta solução para desenvolvimento não apresentou a implementação de planejador gráfico da arquitetura para fornecer alto nível no desenvolvimento de sistemas distribuídos. Assim, entendendo que uma ferramenta gráfica é um módulo de fundamental importância para o fornecimento do alto nível no framework, este trabalho propõe um Planejador Gráfico de arquitetura de sistemas distribuídos baseados em componentes.
+
+
+%\section{Revisão Bibliográfica} \label{sec.rev_bibliografica}
+
+ 
+
+\section{Objetivos do Trabalho}
+
+Estudar, modelar e implementar um Planejador Gráfico para o desenvolvimento em alto nível de sistemas distribuídos baseado em componentes.
+
+\subsection{Objetivo Geral}
+Este trabalho tem como objetivo principal o desenvolvimento de uma IDE para o planejamento em alto nível da Arquitetura de sistemas distribuídos baseados em componentes genéricos especificados pela HighFrame framework.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+  \item  Estudo do HighFrame framework;
+  \item  Levantamento dos requisitos da aplicação a ser desenvolvida;
+  \item  Modelagem;
+	\item  Implementação; e
+	\item Criação do Manual de Uso.
+\end{itemize}
+
+
+\section{Organização do Trabalho}
+
+No capítulo 2 é apresentada a fundamentação teórica necessária dos temas relacionados com o desenvolivmento da solução.
+No capítulo 3 será apresentado o HighFrame Designer, detalhando a modelagem e implementação.
+No capítulo 4 será apresentado o Manual de uso da ferramenta.
+No capítulo 5 a Conclusão.
+
+
+
+

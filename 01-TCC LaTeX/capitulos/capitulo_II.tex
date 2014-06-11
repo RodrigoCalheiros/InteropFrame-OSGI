@@ -1,0 +1,98 @@
+\chapter{Fundamentação}\label{chap:fundamentacao}
+
+Esta seção apresenta os fundamentos necessários para o entendimento da solução. Assim como apresenta uma breve descrição de IDEs existentes com suas qualidades e limitações.
+
+\section{Desenvolvimento Baseado em Componentes} \label{sec.desvol_comp}
+
+	
+Para se tentar resolver a crescente dificuldade em se desenvolver softwares existem vários processos, sendo um deles o de dividir o desenvolvimento em partes menores. Partindo dessa ideia foi criado o conceito de componentes de software.
+
+A Engenharia de Software Baseada em Componentes apresenta-se como um dos elementos chave na construção de middlewares e sistemas distribuídos. Flexibilidade e reusabilidade são algumas das principais vantagens na utilização de componentes, frameworks de componentes possibilitam que componentes sejam modificados ou substituídos em tempo de execução, garantindo assim a disponibilidade do sistema.
+
+\subsection{Elementos da Arquietura Baseada em Componentes}
+
+A arquitetura baseada em componentes tem como elementos básicos: componentes, interfaces e contratos. 
+
+Componentes são definidos por (SZYPERSKI et al, 2008) como sendo unidades de composição com interfaces contratualmente especificadas e dependências de contexto explicitas, que podem ser implantados de maneira independente e estão sujeitos a composição por terceiros.
+
+Interfaces de componentes podem ser definidas como sendo uma especificação do seu ponto de acesso, ou seja, os clientes acessam por eles os serviços providos por um componente. Não contem nenhuma implementação e sim a listagem das operações e as descrições e os protocolos destas operações. Isso torna possível que se faça uma mudança somente na implementação sem que seja preciso alterar a sua interface e que sejam adicionadas novas interfaces sem que seja preciso modificar a implementação já existente do componente. Podem ser de dois tipos: providas e requeridas, que basicamente significa que a primeira especifica os serviços oferecidos pelo componente enquanto que a segunda os serviços requeridos pelo mesmo.
+
+Os contratos listam as restrições globais que os componentes terão, e também lista as pré e pós condições que precisam ser preenchidas para cada operação existente no componente. Isto pode ser considerado como sendo o comportamento de um componente. Servem também para definir o comportamento de um grupo de componentes que interagem entre si.
+
+\subsection{\textit{Framework} de Componentes}
+
+Um framework pode ser entendido como sendo um conjunto de classes que colaboram para realizar uma responsabilidade para um domínio de um subsistema da aplicação. Em relação aos frameworks de componentes eles podem ser entendidos como tendo uma arquitetura genérica e organizada que pode ser usada para a configuração da comunicação de componentes previamente existentes.
+
+A estrutura de uma aplicação baseada em componentes pode ser expressa usando uma ADL (Architecture Description Language). Por meio da ADL é possível descrever o software através da definição de componentes, suas conexões e relacionamentos entre eles. Estas linguagens diminuem a complexidade do software, permitindo que estas definições sejam realizadas em alto nível. Desempenhando assim um papel importante para o desenvolvimento de software de qualidade com a definição de propriedades estruturais no início do processo de desenvolvimento.
+
+Com a ampla adoção de engenharia de software baseada em componentes, diversas técnicas e ferramentas foram propostas, como também diversas ADLs surgiram. Isto acarreta que geralmente cada especificação de uma ADL seja especifica de um framework distinto, o que torna sua utilização em maior escala um pouco restrita. 
+
+
+\section{Programação Orientada a Atributos}
+
+A programação orientada a atributos (@OP) consiste numa técnica de marcação em nível de programa, ou seja, ela permite que programadores marquem elementos de um programa para indicar que eles mantêm semânticas especificas de aplicação ou domínio.
+
+É usado para ocultar detalhes da implementação, aumentando assim o nível de abstração de programação que ajuda a reduzir a complexidade, tornando a implementação de programas mais simples.
+
+Um exemplo de uma linguagem orientada a atributos é a Java Annotation, que foi introduzida em 2004 na linguagem Java e passou a se popularizar depois da sua introdução na plataforma J2EE. As anotações em Java são como um tipo de metadados que permitem a programação orientada a atributos. Cada anotação pode conter atributos que podem ser tipos primitivos, enumerativos ou classes.
+
+As anotações podem ser processadas em tempo de compilação ou em tempo de execução. Java Annotation permite que o desenvolvedor defina uma política de retenção para anotações. Essa política é definida para especificar como uma anotação instanciada é mantida pelo Java. Três tipos de políticas podem ser usadas pelo Java, que são:
+
+
+\begin{itemize}
+	\item SOURCE: As informações da anotação são armazenadas apenas dentro do arquivo de origem, informações remanescentes são armazenadas em um arquivo de classe gerado a partir desse arquivo de origem;
+	\item CLASSE: As informações da anotação são armazenadas no arquivo da classe quando o código fonte é compilado, mas a informação não é carregada na memória como parte da definição de classe;
+	\item RUNTIME: Os dados de anotação são armazenados dentro do arquivo de classe carregado na memória quando a definição de classe é carregada.
+\end{itemize}
+
+\subsection{Fraclet}
+
+O Fraclet é um modelo de programação para diversos modelos de componentes. Ele é composto por vários conceitos chaves pré-existentes, onde cada conceito contem sua respectiva anotação, mas não somente limitadas a elas já que cada desenvolvedor pode criar novas anotações.
+
+Seu funcionamento se baseia na transformação do código fonte do programador em código fonte Java e descrições XML. A partir desse código é possível gerar componentes de tecnologias diferentes, a depender do interpretador de código.
+
+%Uma desvantagem porém é que o Fraclet não fornece recursos para lidar com a comunicação entre objetos distribuídos e nem mecanismo para interoperabilidade entre componentes de mesmo heterogêneos.
+O Fraclet é baseado em uma abordagem genérica que representa conceitos relacionados a modelos de componentes. Nesta abordagem cada conceito chave de componente previamente identifi?cado é defi?nido como uma anotação aplicável para uma parte do código do programa. O núcleo do Fraclet possui identi?cação dos seguintes conceitos chave: componente, interface provida, interface requerida, atributo, serviço, ciclo de vida e dados.
+
+\section{IDEs para especificação de arquiteturas baseada em componentes} \label{sec.ide_comp}
+
+Apesar de vários artigos existentes sobre desenvolvimento baseado em componentes, ainda é escassa a existência de ferramentas que ajudem os desenvolvedores a criar sistemas em alto nível. 
+
+Algumas ferramentas encontradas são aqui descritas.
+
+%Nesta seção serão apresentadas algumas ferramentas que propuseram um ambiente em alto nível para definição da arquitura de distemas baseado em componentes.
+
+\subsection{SAVE-IDE}
+
+No trabalho (SENTILLES et. al., 2009), foi apresentada a SAVE-IDE. Criada com a finalidade de desenvolver sistemas embarcados confiáveis e integrá-los com o desenvolvimento baseado em componentes. Prove suporte ao desenvolvimento baseado no modelo de componentes SaveCCM, que é um modelo especifico para criação de sistemas embarcados.
+
+A geração automática se da através de 3 passos: geração, síntese e compilação em tempo de execução. No primeiro passo o modelo SaveCCM é transformado em arquivos auxiliares de formato XML de acordo com a linguagem SaveCCM. Durante esse passo o usuário cria modelos de códigos fonte para cada componente, onde o comportamento do componente pode ser implementado.
+
+No passo da síntese o modelo de componente SaveCCM é transformado no modelo de execução. 	No ultimo passo o ambiente de compilação em tempo de execução é acionado e o arquivo executável pode ser impresso no hardware alvo ou executado por um simulador.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[keepaspectratio=true,scale=0.65]{Imagens/Capitulo_II/SAVE-IDE.png}
+  \caption{Ambiente do SAVE-IDE}\label{fig.saveide}
+\end{figure}
+
+A abordagem proposta por este modelo de componente e sua IDE se baseia na apresentação de um ambiente (Figura \ref{fig.saveide}), onde seja possível o desenvolvimento de sistemas embarcados baseados em componentes e que se baseia em uma abordagem que enfatiza uma modelagem comportamental formal e na geração automática do executável.
+
+\subsection{Plugin para Eclipse}
+No trabalho (RIBA; CERVANTES, 2007) foi apresentado o processo de desenvolvimento de uma ferramenta MDA para a construção de aplicações orientadas a serviços baseadas em componentes. A ferramenta foi planejada para simplificar o desenvolvimento de componentes, fazendo com que após eles fossem modelados a ferramenta se encarregaria de validar a modelagem baseado na especificação contida na ferramenta.
+
+A ferramenta proposta fornece um maneira de desenvolver componentes como um modelo visual, para posterior transformação em um Modelo de plataforma específica. Esta, é usada como sendo um plugin da IDE de programação Eclipse, o que implica que é preciso ter outro programa instalado previamente. Além dessa pequena limitação outra de maior impacto é que ela prove suporte apenas a plataforma OSGi. A figura \ref{fig.plugin}, apresenta o ambiente de desenvolvimento.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+	\includegraphics[width=0.99\textwidth]{Imagens/Capitulo_II/plugin.png}
+  %\includegraphics[keepaspectratio=false,scale=0.99]{Imagens/Capitulo_II/plugin.png}
+  \caption{Ambiente do SAVE-IDE}\label{fig.plugin2}
+\end{figure}
+
+
+A ferramenta possui validação para após o modelo criado verificar se as restrições estão sendo respeitadas. Em seguida o usuário desenvolvedor deve solicitar a transformação de componentes, neste momento a ferramenta cria os componentes automaticamente, implementando o código técnico do modelo de componentes OSGI.
+
+
