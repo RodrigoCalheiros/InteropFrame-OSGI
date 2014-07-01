@@ -11,16 +11,16 @@
     \end{figure*}
     \vskip 1.5 cm
     \begin{center}
-        {\Large UNIVERSIDADE FEDERAL DE SERGIPE \\ CENTRO DE CI\^ENCIAS EXATAS E TECNOL\'OGICAS \\ DEPARTAMENTO DE COMPUTAC\~AO }\\
+        {\Large UNIVERSIDADE FEDERAL DE SERGIPE \\ CENTRO DE CI\^ENCIAS EXATAS E TECNOL\'OGICAS \\ DEPARTAMENTO DE COMPUTA\c{C}\~AO }\\
         \vspace{6cm}
-        {\bf \LARGE Modularização e Extensão do InteropFrame}\\
+        {\bf \LARGE Modulariza\c{c}\~ao e Extens\~ao do InteropFrame}\\
         \vspace{3cm}
         {\large Felipe Oliveira Carvalho}\\
 				{\large Rodrigo Losano Fontes Calheiros}\\
         \vfill
         \large{S\~ao Crist\'ov\~ao -- SE\\ 2014}
     \end{center}
-\end{titlepage}
+%\end{titlepage}
 
 %% ---------------------------------------------------------------------------- %
 %% Contracapa
@@ -43,14 +43,14 @@
 % Folha de rosto
 \newpage
 \thispagestyle{empty}
-\begin{titlepage}
+%\begin{titlepage}
     \begin{center}
         {\Large Felipe Oliveira Carvalho \\ Rodrigo Losano Fontes Calheiros }\\[8.3cm]
-        {\LARGE Modularização e Extensão do InteropFrame} \\[4.3cm]
+        {\LARGE Modulariza\c{c}\~ao e Extens\~ao do InteropFrame} \\[4.3cm]
         \hspace{.45\textwidth} % posicionando a minipage
         \begin{minipage}{.5\textwidth}
             \singlespacing
-                Pré- Projeto do Trabalho de Conclus\~ao de Curso apresentado como requisito parcial para obten\c c\~ao do t\'itulo de Bacharel em Sistemas de Informação da Universidade Federal de Sergipe. \\
+                Pr\'e- Projeto do Trabalho de Conclus\~ao de Curso apresentado como requisito parcial para obten\c c\~ao do t\'itulo de Bacharel em Sistemas de Informa\c{c}\~ao da Universidade Federal de Sergipe. \\
                 Orientador: Prof. Dr. Tarc\'isio da Rocha
             \onehalfspacing
         \end{minipage}
@@ -58,20 +58,20 @@
         {\large S\~ao Crist\'ov\~ao -- SE} \\
         {\large 2014}
     \end{center}
-\end{titlepage}
+%\end{titlepage}
 \pagebreak
 
 %-----Folha de aprovação
 \newpage
 \thispagestyle{empty}
-\begin{titlepage}
+%\begin{titlepage}
     \begin{center}
-        {\LARGE Modularização e Extensão do InteropFrame}\\[2.3cm]
+        {\LARGE Modulariza\c{c}\~ao e Extens\~ao do InteropFrame}\\[2.3cm]
         {\Large Felipe Oliveira Carvalho \\ Rodrigo Losano Fontes Calheiros} \\[1.5cm]
         \hspace{.45\textwidth} % posicionando a minipage
         \begin{minipage}{.5\textwidth}
             \singlespacing
-                Pré- Projeto do Trabalho de Conclus\~ao de Curso apresentado como requisito parcial para obten\c c\~ao do t\'itulo de Bacharel em Sistemas de Informação da Universidade Federal de Sergipe. \\
+                Pr\'e- Projeto do Trabalho de Conclus\~ao de Curso apresentado como requisito parcial para obten\c c\~ao do t\'itulo de Bacharel em Sistemas de Informa\c{c}\~ao da Universidade Federal de Sergipe. \\
 
             \onehalfspacing
         \end{minipage}\\[2.5cm]
@@ -128,10 +128,14 @@
 % Resumo
 \chapter*{Resumo}
 
+O desenvolvimento de Sistemas Distribu\'idos tem se tornado uma tarefa complexa. Uma t\'ecnica que tornou-se amplamente utilizada no desenvolvimento desses sistemas \'e a Engenharia de Software Baseada em Componentes (ESBC), o que resultou no surgimento de diversos modelos de componentes. Um desafio que surge do desenvolvimento baseado em componentes \'e o da interoperabilidade entre partes heterog\^eneas desenvolvidas em diferentes modelos de componentes. Em geral, o problema da interoperabilidade entre partes heterog\^eneas de um sistema \'e tratado pelo uso de \textit{middlewares}. Sistemas de \textit{middleware} s\~ao capazes de promover integra\c{c}\~ao e abstrair do desenvolvedor detalhes dessa integra\c{c}\~ao.
 
+Dentro desse contexto foi criado o InteropFrame, um \textit{middleware} que lida com a interoperabilidade entre sistemas distribu\'idos desenvolvidos nos modelos de componentes OpenCOM e Fractal, al\'em de tratar de detalhes de comunica\c{c}\~ao remota utilizando RMI e \textit{Web Services SOAP}. O InteropFrame \'e uma solu\c{c}\~ao desenvolvida em Java puro e \'e extens\'ivel para o suporte a novos modelos de componentes e tamb\'em de comunica\c{c}\~ao remota. Por\'em, por ser desenvolvido em Java puro, esse suporte fica dificultado, uma vez que n\~ao s\~ao estabelecidas interfaces modulares para a extensibilidade. Al\'em dessa problem\'atica, o InteropFrame tamb\'em possui limita\c{c}\~oes na comunica\c{c}\~ao remota interna.
 
-
-\noindent \textbf{Palavras-chave:} Modelos de Componentes, Modularização, Sistemas Distribuídos.
+Este trabalho prop\~oe a modulariza\c{c}\~ao do InteropFrame utilizando o modelo OSGi, de forma a reorganizar sua arquitetura em \textit{plug-ins} para os modelos de componentes suportados e tamb\'em para os modelos de comunica\c{c}\~ao remota. Visando confirmar a proposta de modulariza\c{c}\~ao, ser\'a adicionado o suporte ao modelo OSGi para tornar-se interoper\'avel com os modelos j\'a suportados pelo InteropFrame. Al\'em da modulariza\c{c}\~ao, ser\~ao feitas melhorias internas na comunica\c{c}\~ao remota do InteropFrame.
+\newline
+\newline
+\noindent \textbf{Palavras-chave:} Modelos de Componentes, Interoperabilidade, Modulariza\c{c}\~ao, Sistemas Distribu\'idos.
 
 % ---------------------------------------------------------------------------- %
 % Abstract
@@ -147,31 +151,20 @@
 \tableofcontents    % imprime o sumário
 
 %%% ---------------------------------------------------------------------------- %
-\chapter{Lista de Abreviaturas}
-\begin{tabular}{ll}
- %   AG  	&	Algoritmos Gen\'eticos	\\
- %   ANEEL	&	Ag\^encia Nacional de Energia El\'etrica	\\
-@OP & Attribute Oriented Programming \\
-ADL & Architecture Description Language \\
-API & Application Programming Interface \\
-IDE & Integrated Development Enviroment \\
-J2EE & Java 2 Enterprise Edition \\
-OSGi & Open Services Gateway Initiative \\
-SAVECCM & SAVE Comp Component Model \\
-UML & Unified Markup Language \\
-XML & Extensible Markup Language \\
+%\chapter{Lista de Abreviaturas}
+%\begin{tabular}{ll}
 
-
-
-		 
+%IDE & Integrated Development Enviroment \\
+%OSGi & Open Services Gateway Initiative \\
+%XML & Extensible Markup Language \\		 
    
-\end{tabular}
+%\end{tabular}
 
 % ---------------------------------------------------------------------------- %
 
 
 % Listas de figuras e tabelas criadas automaticamente
-\listoffigures
+%\listoffigures
 %\listoftables
 
 

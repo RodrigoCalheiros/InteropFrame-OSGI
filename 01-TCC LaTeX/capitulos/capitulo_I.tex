@@ -1,46 +1,50 @@
+\thispagestyle{empty}
 \chapter{Introdução}\label{chap:introducao}
 
-\section{Considerações Iniciais} \label{sec.consideracos_iniciais}
+Esta introdução tem por objetivo apresentar: a motivação para este trabalho de conclusão de curso; os objetivos gerais e os específicos deste trabalho; as principais contribuições; e a estrutura e organização deste documento.
 
-Um sistema distribuído é considerado aquele no qual os componentes localizados em computadores interligados em rede se comunicam e coordenam suas ações apenas passando mensagens. (COLOURIUS, 2007). Tem como objetivo adicionar o poder computacional de diversos computadores, interligados por uma rede, para compartilhar a execução de tarefas.
+\section{Motivação} \label{sec.motivacao}
 
-O desenvolvimento de sistemas para este ambiente tem se tornado uma tarefa complexa, e como o número de recursos exigidos em sistemas distribuídos é crescente isso faz com que a complexidade no desenvolvimento dos sistemas aumente (Blair et al. 2011).  Uma abordagem utilizada para lidar com esse problema é o desenvolvimento baseado em componentes, que permite desenvolver software através da composição de componentes individuais com propósitos bem definidos, possibilitando aumentar a produtividade, reusabilidade e manutenabilidade do software.
+A necessidade de soluções em sistemas distribuídos complexos vem substituindo a visão de sistemas distribuídos homogêneos onde aplicações de domínio específico são desenvolvidas usando plataformas e \textit{middleware} projetados especificamente para esse domínio. Soluções tecnológicas independentes têm sido interconectadas para criar estruturas ainda mais ricas, os chamados sistemas de sistemas (SoS). Um dos principais desafios dessas interconexões é a questão da interoperabilidade: a habilidade desses sistemas se conectarem, de trocarem dados e de se comunicarem \cite{blair2011}, \cite{inverardi2010}, \cite{bromberg2011}.
 
-O uso da abordagem do desenvolvimento baseado em componentes traz consigo alguns problemas, como: a existência de inúmeros modelos diferentes de componentes para sistemas distribuídos, onde cada modelo possui sua especificidade do código técnico para o desenvolvimento de componentes e seu próprio padrão de desenvolvimento. O que exige do desenvolvedor o conhecimento especifico de características de cada modelo. Devido a diversidade de modelos a reusabilidade de componentes de software de modelos distintos é dificultada, uma vez que não há uma interoperabilidade nativa entre modelos de componentes heterogêneos.
+Uma técnica que tem sido amplamente utilizada nos últimos anos no desenvolvimento de plataformas de sistemas distribuídos é a ESBC (Engenharia de Software Baseada em Componentes) \cite{rouvoy2009}. Como consequência do sucesso no uso de componentes de software, vários modelos de componentes diferentes emergiram. OpenCOM~\cite{coulson2008}, Fractal~\cite{bruneton2006}, Spring~\cite{spring2007}, EJB~\cite{ejb2005}, OSGi~\cite{osgi}, CCM~\cite{ccm2002} e SCA~\cite{sca2007} são alguns exemplos destes modelos.
 
-Para minimizar os problemas apresentados quanto ao desenvolvimento de sistemas distribuídos baseados em componentes, um framework para desenvolvimento em alto nível foi proposto em (SANTOS; ROCHA, 2013). Este framework visa disponibilizar um modelo de programação genérico que é fornecido ao desenvolvedor através de anotações no código de negócio da aplicação. Assim, componentes de modelos específicos são gerados a partir destas anotações, solução que livra o desenvolvedor de ter que conhecer detalhes técnicos de cada modelo que se deseja utilizar. Além disso, este framework retira do desenvolvedor a necessidade de conhecer métodos de comunicação remota distribuída, tratando a complexidade de desenvolvimento de objetos distribuídos. Chamado de HighFrame, ele é composto por um repositório, que fica situado em um servidor, que contém todos os componentes genéricos possibilitando assim a reutilização dos mesmos por diversos usuários; e por um Planejador Gráfico, que é a ferramenta na qual o desenvolvedor pode compor a arquitetura do sistema distribuído em alto nível.
+Diversas soluções têm sido criadas para lidar com a interoperabilidade entre sistemas distribuídos desenvolvidos em diferentes modelos de componentes. Uma dessas soluções é o objeto de estudo deste trabalho: O InteropFrame \cite{nascimento2013}.
 
-O framework destacado anteriormente apresenta um conjunto de recursos para minimizar a complexidade de desenvolvimento de sistemas distribuídos baseados em compoenentes. Porém, esta solução para desenvolvimento não apresentou a implementação de planejador gráfico da arquitetura para fornecer alto nível no desenvolvimento de sistemas distribuídos. Assim, entendendo que uma ferramenta gráfica é um módulo de fundamental importância para o fornecimento do alto nível no framework, este trabalho propõe um Planejador Gráfico de arquitetura de sistemas distribuídos baseados em componentes.
-
-
-%\section{Revisão Bibliográfica} \label{sec.rev_bibliografica}
-
+O InteropFrame é um \textit{middleware} extensível desenvolvido em Java que trata a questão da interoperabilidade entre sistemas desenvolvidos nos modelos de componentes OpenCOM ou Fractal através da geração automática de \textit{proxies} para a comunicação remota. Estes \textit{proxies} atuam como representantes locais a um sistema que repassam as chamadas de métodos para outros computadores dentro de uma rede, seja ela local ou a própria internet. No InteropFrame, as chamadas de métodos podem ser repassadas pela rede utilizando o mecanismo Java RMI (\textit{Remote Method Invocation}) ou \textit{Web Services} do tipo SOAP. Com isso o InteropFrame é capaz de fazer o \textit{binding} (ligação remota) entre partes distribuídas de modo que o utilizador não precise se preocupar com detalhes de comunicação remota nem de aspectos de interoperabilidade entre os modelos de componentes suportados. O InteropFrame é extensível do ponto de vista do desenvolvedor que deseje implementar o suporte a novos modelos de componentes e de \textit{binding} através do desenvolvimento de \textit{plug-ins} à parte.
  
+Embora o InteropFrame funcione para os modelos de componentes propostos, ele possui algumas limitações. Uma dessas limitações é que o InteropFrame não é desenvolvido numa plataforma de componentes específica, sendo totalmente desenvolvido em Java. Esse fato acaba limitando o processo de extensibilidade do \textit{middleware}. Outra limitação é a quantidade de modelos de componentes suportados -- apenas Fractal e OpenCOM.
 
 \section{Objetivos do Trabalho}
 
-Estudar, modelar e implementar um Planejador Gráfico para o desenvolvimento em alto nível de sistemas distribuídos baseado em componentes.
-
 \subsection{Objetivo Geral}
-Este trabalho tem como objetivo principal o desenvolvimento de uma IDE para o planejamento em alto nível da Arquitetura de sistemas distribuídos baseados em componentes genéricos especificados pela HighFrame framework.
+
+Superar limitações do InteropFrame e estender o suporte a novos modelos de componentes.
 
 \subsection{Objetivos Específicos}
+
 \begin{itemize}
-  \item  Estudo do HighFrame framework;
-  \item  Levantamento dos requisitos da aplicação a ser desenvolvida;
-  \item  Modelagem;
-	\item  Implementação; e
-	\item Criação do Manual de Uso.
+  \item Estudo do InteropFrame;
+  \item Fazer a portabilidade do InteropFrame para o modelo de componentes OSGi como forma de modularizá-lo em \textit{plug-ins}. Dessa forma o suporte à extensibilidade ficará facilitado;
+  \item Implementar o suporte ao OSGi como um modelo de componentes interoperável dentro do InteropFrame a fim de comprovar a extensibilidade do \textit{middleware};
+	\item Avaliar impactos no desempenho do \textit{middleware} devido à introdução do OSGi;
+	\item Realizar melhorias no processo interno de comunicação remota do InteropFrame.
 \end{itemize}
 
+\section{Contribuições deste Trabalho}
+
+As principais contribuições deste trabalho são:
+\begin{itemize}
+	\item Evolução do InteropFrame.
+	\item Disponibilização do código-fonte como forma de possibilitar estudos futuros à respeito da interoperabilidade entre sistemas distribuídos desenvolvidos em diferentes modelos de componentes.
+\end{itemize}
 
 \section{Organização do Trabalho}
 
-No capítulo 2 é apresentada a fundamentação teórica necessária dos temas relacionados com o desenvolivmento da solução.
-No capítulo 3 será apresentado o HighFrame Designer, detalhando a modelagem e implementação.
-No capítulo 4 será apresentado o Manual de uso da ferramenta.
-No capítulo 5 a Conclusão.
+Os capítulos subsequentes deste trabalho serão organizados da seguinte forma:
 
-
-
-
+\begin{itemize}
+	\item Capítulo 2 - Apresentação dos conceitos básicos necessários para o entendimento do tema.
+	\item Capítulo 3 - Descrição do InteropFrame e apresentação da solução proposta.
+	\item Capítulo 4 - Considerações finais.
+\end{itemize}

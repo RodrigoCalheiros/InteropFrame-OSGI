@@ -1,12 +1,14 @@
-\documentclass[12pt,oneside,a4paper]{book}
+\documentclass[12pt,oneside,a4paper]{abntex2}
 
 % ---------------------------------------------------------------------------- %
 % Pacotes
-\usepackage[brazilian]{babel}
+\usepackage[brazilian,brazil]{babel}
 %\usepackage[portuges,english]{babel}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage{ucs}
 %\usepackage[T1]{fontenc}
+
+\usepackage[alf]{abntex2cite}
 
 \usepackage[scaled]{uarial}
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
@@ -35,7 +37,7 @@
 \usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
 \usepackage[usenames,svgnames,dvipsnames]{xcolor}
 \usepackage[a4paper,top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry} % margens
-\usepackage[pdftex,plainpages=false,pdfpagelabels,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black,bookmarksopen=false]{hyperref} \usepackage{longtable}
+\usepackage[pdftex,plainpages=false,pdfpagelabels,colorlinks=false,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black,bookmarksopen=false]{hyperref} \usepackage{longtable}
 \usepackage{caption}
 
 \usepackage{listings}
@@ -119,6 +121,22 @@ framexleftmargin=10pt,
 framexrightmargin=10pt
 }
 
+\makeatletter
+\hypersetup{
+        %pagebackref=true,
+        pdftitle={\@title}, 
+        pdfauthor={\@author},
+        pdfsubject={\imprimirpreambulo},
+        pdfcreator={LaTeX with abnTeX2},
+        pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+        colorlinks=true,                % false: boxed links; true: colored links
+        linkcolor=black,                 % color of internal links
+        citecolor=black,                 % color of links to bibliography
+        filecolor=black,              % color of file links
+        urlcolor=black,
+        bookmarksdepth=4
+}
+
 % ---------------------------------------------------------------------------- %
 
 % Corpo do texto
@@ -147,7 +165,7 @@ framexrightmargin=10pt
 \onehalfspacing              % espaçamento um e meio
 \setlength\parskip{0.3cm}    % espaçamento entre parágrafos
 
-%\input capitulos/capitulo_I        % associado ao arquivo: 'chap_introducao.tex'
+\input capitulos/capitulo_I        % associado ao arquivo: 'chap_introducao.tex'
 %\input capitulos/capitulo_II
 %\input capitulos/capitulo_III
 %\input capitulos/capitulo_IV
@@ -167,7 +185,7 @@ framexrightmargin=10pt
 % Bibliografia
 \backmatter \singlespacing   % espaçamento simples
 %\bibliographystyle{abnt-alf}
-%\bibliography{bibliografia}  % associado ao arquivo: 'bibliografia.bib'
+\bibliography{referencias}  % associado ao arquivo: 'bibliografia.bib'
 
 % ---------------------------------------------------------------------------- %
 % Índice remissivo

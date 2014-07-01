@@ -1,7 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: tcc.aux
 The style file: abntex2-alf.bst
-I found no \bibdata command---while reading file tcc.aux
-Warning--I didn't find a database entry for "abnt-url-package=url"
+Database file #1: abntex2-options.bib
+Database file #2: referencias.bib
+Warning--entry type for "osgi" isn't style-file defined
+--line 306 of file referencias.bib
+Warning--campo year vazio ou faltando em osgi
+You can't pop an empty literal stack for entry nascimento2013
+while executing---line 2217 of file abntex2-alf.bst
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.1           |
 | Em caso de dúvidas ou problemas com este estilo procure |

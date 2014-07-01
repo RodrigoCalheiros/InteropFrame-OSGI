@@ -5,4 +5,90 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.1 }
 
+\bibitem[Alliance]{osgi}
+\abntrefinfo{Alliance}{ALLIANCE}{}
+{ALLIANCE, O. \emph{{The OSGi Architecture}}.
+Dispon{\'\i}vel em: \url{http://www.osgi.org/Technology/WhatIsOSGi}. Acesso em:
+  22 maio 2014.}
+
+\bibitem[Blair et al. 2011]{blair2011}
+\abntrefinfo{Blair et al.}{BLAIR et al.}{2011}
+{BLAIR, G. et al. {Interoperability in Complex Distributed Systems}. In:
+  BERNARDO, M.; ISSARNY, V. (Ed.). \emph{Formal Methods for Eternal Networked
+  Software Systems}. Springer Berlin / Heidelberg, 2011,  (Lecture Notes in
+  Computer Science, v.~6659). p. 1--26.
+ISBN 978-3-642-21454-7.
+10.1007/978-3-642-21455-4\_1.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/978-3-642-21455-4\\_1}.}
+
+\bibitem[Bromberg et al. 2011]{bromberg2011}
+\abntrefinfo{Bromberg et al.}{BROMBERG et al.}{2011}
+{BROMBERG, Y. et al. Bridging the interoperability gap: overcoming combined
+  application and middleware heterogeneity.
+\emph{12th IFIP/ACM/USENIX International Middleware Conference}, Springer, p.
+  390--409, 2011.}
+
+\bibitem[Bruneton et al. 2006]{bruneton2006}
+\abntrefinfo{Bruneton et al.}{BRUNETON et al.}{2006}
+{BRUNETON, E. et al. The fractal component model and its support in java:
+  Experiences with auto-adaptive and reconfigurable systems.
+\emph{Softw. Pract. Exper.}, John Wiley \& Sons, Inc., New York, NY, USA,
+  v.~36, n. 11-12, p. 1257--1284, set. 2006.
+ISSN 0038-0644.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1002/spe.v36:11/12}.}
+
+\bibitem[Coulson et al. 2008]{coulson2008}
+\abntrefinfo{Coulson et al.}{COULSON et al.}{2008}
+{COULSON, G. et al. A generic component model for building systems software.
+\emph{ACM Trans. Comput. Syst.}, ACM, New York, NY, USA, v.~26, n.~1, p.
+  1:1--1:42, mar. 2008.
+ISSN 0734-2071.
+Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/1328671.1328672}.}
+
+\bibitem[DeMichiel e Keith 2007]{ejb2005}
+\abntrefinfo{DeMichiel e Keith}{DEMICHIEL; KEITH}{2007}
+{DEMICHIEL, L.; KEITH, M. \emph{JSR 220: Enterprise JavaBeans}.
+3.0. ed. Santa Clara, 2007.}
+
+\bibitem[Inverardi, Issarny e Spalazzese 2010]{inverardi2010}
+\abntrefinfo{Inverardi, Issarny e Spalazzese}{INVERARDI; ISSARNY;
+  SPALAZZESE}{2010}
+{INVERARDI, P.; ISSARNY, V.; SPALAZZESE, R. A theory of mediators for eternal
+  connectors.
+\emph{Leveraging Applications of Formal Methods, Verification, and Validation},
+  Springer, p. 236--250, 2010.}
+
+\bibitem[Johnson et al. 2007]{spring2007}
+\abntrefinfo{Johnson et al.}{JOHNSON et al.}{2007}
+{JOHNSON, R. et al. \emph{The spring framework - reference documentation}.
+2.0.6. ed. [S.l.], 2007.}
+
+\bibitem[Nascimento 2013]{nascimento2013}
+\abntrefinfo{Nascimento}{NASCIMENTO}{2013}
+{NASCIMENTO, S.~C. do.
+
+\emph{{Um Framework Extensível para Interoperabilidade Dinâmica entre
+  Componentes Distribuídos}} --- Universidade Federal de Sergipe, Aracaju, SE,
+  Brasil, 2013.}
+
+\bibitem[{OASIS Open} 2011]{sca2007}
+\abntrefinfo{{OASIS Open}}{{OASIS Open}}{2011}
+{{OASIS Open}. \emph{Service component architecture (SCA) assembly model
+  specification}.
+1.1. ed. [S.l.], 2011.}
+
+\bibitem[OMG 2002]{ccm2002}
+\abntrefinfo{OMG}{OMG}{2002}
+{OMG. \emph{OMG CORBA component model (CCM) specification}.
+3.0. ed. Needham, 2002.}
+
+\bibitem[Rouvoy e Merle 2009]{rouvoy2009}
+\abntrefinfo{Rouvoy e Merle}{ROUVOY; MERLE}{2009}
+{ROUVOY, R.; MERLE, P. {Leveraging component-based software engineering with
+  Fraclet}.
+\emph{Annals of Telecommunications}, Springer Paris, v.~64, p. 65--79, 2009.
+ISSN 0003-4347.
+10.1007/s12243-008-0072-z.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/s12243-008-0072-z}.}
+
 \end{thebibliography}
