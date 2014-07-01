@@ -50,10 +50,11 @@
         \hspace{.45\textwidth} % posicionando a minipage
         \begin{minipage}{.5\textwidth}
             \singlespacing
-                Pr\'e- Projeto do Trabalho de Conclus\~ao de Curso apresentado como requisito parcial para obten\c c\~ao do t\'itulo de Bacharel em Sistemas de Informa\c{c}\~ao da Universidade Federal de Sergipe. \\
-                Orientador: Prof. Dr. Tarc\'isio da Rocha
+                Pr\'e- Projeto do Trabalho de Conclus\~ao de Curso apresentado como requisito parcial para obten\c c\~ao do t\'itulo de Bacharel em Sistemas de Informa\c{c}\~ao da Universidade Federal de Sergipe. \\ \\ \\ \\
+                
             \onehalfspacing
         \end{minipage}
+				{\large Orientador: Prof. Dr. Tarc\'isio da Rocha}
         \vfill
         {\large S\~ao Crist\'ov\~ao -- SE} \\
         {\large 2014}
@@ -107,7 +108,7 @@
 %-----FIm da folha de aprovação
 
 
-\pagenumbering{roman}     % começamos a numerar
+%\pagenumbering{roman}     % começamos a numerar
 
 % ---------------------------------------------------------------------------- %
 % Agradecimentos:
@@ -126,16 +127,16 @@
 % ---------------------------------------------------------------------------- %
 
 % Resumo
-\chapter*{Resumo}
+%\chapter*{Resumo}
 
-O desenvolvimento de Sistemas Distribu\'idos tem se tornado uma tarefa complexa. Uma t\'ecnica que tornou-se amplamente utilizada no desenvolvimento desses sistemas \'e a Engenharia de Software Baseada em Componentes (ESBC), o que resultou no surgimento de diversos modelos de componentes. Um desafio que surge do desenvolvimento baseado em componentes \'e o da interoperabilidade entre partes heterog\^eneas desenvolvidas em diferentes modelos de componentes. Em geral, o problema da interoperabilidade entre partes heterog\^eneas de um sistema \'e tratado pelo uso de \textit{middlewares}. Sistemas de \textit{middleware} s\~ao capazes de promover integra\c{c}\~ao e abstrair do desenvolvedor detalhes dessa integra\c{c}\~ao.
+%O desenvolvimento de Sistemas Distribu\'idos tem se tornado uma tarefa complexa. Uma t\'ecnica que tornou-se amplamente utilizada no desenvolvimento desses sistemas \'e a Engenharia de Software Baseada em Componentes (ESBC), o que resultou no surgimento de diversos modelos de componentes. Um desafio que surge do desenvolvimento baseado em componentes \'e o da interoperabilidade entre partes heterog\^eneas desenvolvidas em diferentes modelos de componentes. Em geral, o problema da interoperabilidade entre partes heterog\^eneas de um sistema \'e tratado pelo uso de \textit{middlewares}. Sistemas de \textit{middleware} s\~ao capazes de promover integra\c{c}\~ao e abstrair do desenvolvedor detalhes dessa integra\c{c}\~ao.
 
-Dentro desse contexto foi criado o InteropFrame, um \textit{middleware} que lida com a interoperabilidade entre sistemas distribu\'idos desenvolvidos nos modelos de componentes OpenCOM e Fractal, al\'em de tratar de detalhes de comunica\c{c}\~ao remota utilizando RMI e \textit{Web Services SOAP}. O InteropFrame \'e uma solu\c{c}\~ao desenvolvida em Java puro e \'e extens\'ivel para o suporte a novos modelos de componentes e tamb\'em de comunica\c{c}\~ao remota. Por\'em, por ser desenvolvido em Java puro, esse suporte fica dificultado, uma vez que n\~ao s\~ao estabelecidas interfaces modulares para a extensibilidade. Al\'em dessa problem\'atica, o InteropFrame tamb\'em possui limita\c{c}\~oes na comunica\c{c}\~ao remota interna.
+%Dentro desse contexto foi criado o InteropFrame, um \textit{middleware} que lida com a interoperabilidade entre sistemas distribu\'idos desenvolvidos nos modelos de componentes OpenCOM e Fractal, al\'em de tratar de detalhes de comunica\c{c}\~ao remota utilizando RMI e \textit{Web Services SOAP}. O InteropFrame \'e uma solu\c{c}\~ao desenvolvida em Java puro e \'e extens\'ivel para o suporte a novos modelos de componentes e tamb\'em de comunica\c{c}\~ao remota. Por\'em, por ser desenvolvido em Java puro, esse suporte fica dificultado, uma vez que n\~ao s\~ao estabelecidas interfaces modulares para a extensibilidade. Al\'em dessa problem\'atica, o InteropFrame tamb\'em possui limita\c{c}\~oes na comunica\c{c}\~ao remota interna.
 
-Este trabalho prop\~oe a modulariza\c{c}\~ao do InteropFrame utilizando o modelo OSGi, de forma a reorganizar sua arquitetura em \textit{plug-ins} para os modelos de componentes suportados e tamb\'em para os modelos de comunica\c{c}\~ao remota. Visando confirmar a proposta de modulariza\c{c}\~ao, ser\'a adicionado o suporte ao modelo OSGi para tornar-se interoper\'avel com os modelos j\'a suportados pelo InteropFrame. Al\'em da modulariza\c{c}\~ao, ser\~ao feitas melhorias internas na comunica\c{c}\~ao remota do InteropFrame.
-\newline
-\newline
-\noindent \textbf{Palavras-chave:} Modelos de Componentes, Interoperabilidade, Modulariza\c{c}\~ao, Sistemas Distribu\'idos.
+%Este trabalho prop\~oe a modulariza\c{c}\~ao do InteropFrame utilizando o modelo OSGi, de forma a reorganizar sua arquitetura em \textit{plug-ins} para os modelos de componentes suportados e tamb\'em para os modelos de comunica\c{c}\~ao remota. Visando confirmar a proposta de modulariza\c{c}\~ao, ser\'a adicionado o suporte ao modelo OSGi para tornar-se interoper\'avel com os modelos j\'a suportados pelo InteropFrame. Al\'em da modulariza\c{c}\~ao, ser\~ao feitas melhorias internas na comunica\c{c}\~ao remota do InteropFrame.
+%\newline
+%\newline
+%\noindent \textbf{Palavras-chave:} Modelos de Componentes, Interoperabilidade, Modulariza\c{c}\~ao, Sistemas Distribu\'idos.
 
 % ---------------------------------------------------------------------------- %
 % Abstract
@@ -148,7 +149,7 @@ Este trabalho prop\~oe a modulariza\c{c}\~ao do InteropFrame utilizando o modelo
 
 % ---------------------------------------------------------------------------- %
 % Sumário
-\tableofcontents    % imprime o sumário
+%\tableofcontents    % imprime o sumário
 
 %%% ---------------------------------------------------------------------------- %
 %\chapter{Lista de Abreviaturas}

@@ -5,6 +5,17 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.1 }
 
+\bibitem[ACCELEO 2012]{acceleo2012}
+\abntrefinfo{ACCELEO}{ACCELEO}{2012}
+{ACCELEO. \emph{{Acceleo's website}}. 2012.
+Dispon{\'\i}vel em: \url{http://www.acceleo.org/pages/home/en}. Acesso em: 16
+  jun. 2012.}
+
+\bibitem[Adamatii 2006]{adamatii2006}
+\abntrefinfo{Adamatii}{ADAMATII}{2006}
+{ADAMATII, P.~M. {FUMIGANT: Gerador de c\'odigo Java a partir de Base de
+  Dados}. Faculdade Cenecista Nossa Senhora dos Anjos, Gravata\'{i}. 2006.}
+
 \bibitem[Alliance]{osgi}
 \abntrefinfo{Alliance}{ALLIANCE}{}
 {ALLIANCE, O. \emph{{The OSGi Architecture}}.
@@ -37,6 +48,23 @@ Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/978-3-642-21455-4\\_1}.}
 ISSN 0038-0644.
 Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1002/spe.v36:11/12}.}
 
+\bibitem[Clarke et al. 2001]{clarke2001}
+\abntrefinfo{Clarke et al.}{CLARKE et al.}{2001}
+{CLARKE, M. et al. An efficient component model for the construction of
+  adaptive middleware. In:  \emph{Proceedings of the IFIP/ACM International
+  Conference on Distributed Systems Platforms Heidelberg}. London, UK, UK:
+  Springer-Verlag, 2001.  (Middleware '01), p. 160--178.
+ISBN 3-540-42800-3. Dispon{\'\i}vel em:
+  \url{http://dl.acm.org/citation.cfm?id=646591.697779}.}
+
+\bibitem[Coulouris, Dollimore e Kindberg 2007]{coulouris2007}
+\abntrefinfo{Coulouris, Dollimore e Kindberg}{COULOURIS; DOLLIMORE;
+  KINDBERG}{2007}
+{COULOURIS, G.; DOLLIMORE, J.; KINDBERG, T. \emph{Sistemas Distribu{\'\i}dos:
+  Conceitos e Projeto}. 4 ed.. ed. Porto Alegre, RS, Brasil: Bookman, 2007.
+ISBN 9788560031498. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=KSZ1rIRWmUoC}.}
+
 \bibitem[Coulson et al. 2008]{coulson2008}
 \abntrefinfo{Coulson et al.}{COULSON et al.}{2008}
 {COULSON, G. et al. A generic component model for building systems software.
@@ -45,10 +73,71 @@ Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1002/spe.v36:11/12}.}
 ISSN 0734-2071.
 Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/1328671.1328672}.}
 
+\bibitem[Councill e Heineman 2001]{councill2001}
+\abntrefinfo{Councill e Heineman}{COUNCILL; HEINEMAN}{2001}
+{COUNCILL, B.; HEINEMAN, G.~T. Component-based software engineering. In:
+  HEINEMAN, G.~T.; COUNCILL, W.~T. (Ed.). Boston, MA, USA: Addison-Wesley
+  Longman Publishing Co., Inc., 2001. cap. Definition of a Software Component
+  and Its Elements, p. 5--19.
+ISBN 0-201-70485-4.
+Dispon{\'\i}vel em: \url{http://dl.acm.org/citation.cfm?id=379381.379438}.}
+
+\bibitem[Coupaye e Stefani 2007]{coupaye2007}
+\abntrefinfo{Coupaye e Stefani}{COUPAYE; STEFANI}{2007}
+{COUPAYE, T.; STEFANI, J.-B. Fractal component-based software engineering. In:
+  SüDHOLT, M.; CONSEL, C. (Ed.). \emph{Object-Oriented Technology. ECOOP 2006
+  Workshop Reader}. Springer Berlin Heidelberg, 2007,  (Lecture Notes in
+  Computer Science, v.~4379). p. 117--129.
+ISBN 978-3-540-71772-0.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/978-3-540-71774-4\_13}.}
+
+\bibitem[Crnkovic, Stafford e Szyperski 2011]{crnkovic2011}
+\abntrefinfo{Crnkovic, Stafford e Szyperski}{CRNKOVIC; STAFFORD;
+  SZYPERSKI}{2011}
+{CRNKOVIC, I.; STAFFORD, J.; SZYPERSKI, C. Software components beyond
+  programming: From routines to services.
+\emph{Software, IEEE}, IEEE, v.~28, n.~3, p. 22--26, 2011.}
+
+\bibitem[Deitel e Deitel 2010]{deitel2010}
+\abntrefinfo{Deitel e Deitel}{DEITEL; DEITEL}{2010}
+{DEITEL, H.; DEITEL, P. \emph{Java: como programar}. 8 ed.. ed. São Paulo, SP,
+  Brasil: PEARSON BRASIL, 2010.
+ISBN 9788576055631. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=xWMVRAAACAAJ}.}
+
 \bibitem[DeMichiel e Keith 2007]{ejb2005}
 \abntrefinfo{DeMichiel e Keith}{DEMICHIEL; KEITH}{2007}
 {DEMICHIEL, L.; KEITH, M. \emph{JSR 220: Enterprise JavaBeans}.
 3.0. ed. Santa Clara, 2007.}
+
+\bibitem[Fielding 2000]{fielding2000}
+\abntrefinfo{Fielding}{FIELDING}{2000}
+{FIELDING, R.~T.
+\emph{Architectural Styles and the Design of Network-based Software
+  Architectures}.
+Tese (Doutorado), 2000. AAI9980887.}
+
+\bibitem[Foundation]{ecf2014}
+\abntrefinfo{Foundation}{FOUNDATION}{}
+{FOUNDATION, T.~E. \emph{{Eclipse Communication Framework Project Home}}.
+Dispon{\'\i}vel em: \url{http://www.eclipse.org/ecf/}. Acesso em: 05 junho
+  2014.}
+
+\bibitem[Grace 2007]{grace2007}
+\abntrefinfo{Grace}{GRACE}{2007}
+{GRACE, P. {The OpemCOMJ Handbook. Technical report, Distributed Multimedia
+  Research Group}. Lancaster University, Lancaster. 2007.}
+
+\bibitem[Hall et al. 2011]{hall2011}
+\abntrefinfo{Hall et al.}{HALL et al.}{2011}
+{HALL, R. et al. \emph{Osgi in Action: Creating Modular Applications in Java}.
+  1st. ed. Greenwich, CT, USA: Manning Publications Co., 2011.
+ISBN 1933988916, 9781933988917.}
+
+\bibitem[Harold 2004]{harold2004}
+\abntrefinfo{Harold}{HAROLD}{2004}
+{HAROLD, E.~R. \emph{Java Network Programming}. 3. ed. Beijing: O'Reilly, 2004.
+ISBN 978-0-596-00721-8.}
 
 \bibitem[Inverardi, Issarny e Spalazzese 2010]{inverardi2010}
 \abntrefinfo{Inverardi, Issarny e Spalazzese}{INVERARDI; ISSARNY;
@@ -63,12 +152,34 @@ Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/1328671.1328672}.}
 {JOHNSON, R. et al. \emph{The spring framework - reference documentation}.
 2.0.6. ed. [S.l.], 2007.}
 
+\bibitem[Knoernschild 2012]{kirk2012}
+\abntrefinfo{Knoernschild}{KNOERNSCHILD}{2012}
+{KNOERNSCHILD, K. \emph{Java Application Architecture: Modularity Patterns with
+  Examples Using OSGi}. Prentice Hall, 2012.  (Agile Software Development
+  Series).
+ISBN 9780321247131. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=iOtwFoU1Dt4C}.}
+
+\bibitem[Knuth 1996]{knuth1996}
+\abntrefinfo{Knuth}{KNUTH}{1996}
+{KNUTH, D. \emph{Selected Papers on Computer Science}. University of Chicago
+  Press, 1996.  (CSLI lecture notes: Center for the Study of Language and
+  Information).
+ISBN 9781881526919. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=hqBpQgAACAAJ}.}
+
+\bibitem[Kornecki e Johri 2006]{kornecki2006}
+\abntrefinfo{Kornecki e Johri}{KORNECKI; JOHRI}{2006}
+{KORNECKI, A.~J.; JOHRI, S. {Automatic Code Generation: Model-Code Semantic
+  Consistency}. In:  \emph{Software Engineering Research and Practice'06}.
+  [S.l.: s.n.], 2006. p. 191--197.}
+
 \bibitem[Nascimento 2013]{nascimento2013}
 \abntrefinfo{Nascimento}{NASCIMENTO}{2013}
 {NASCIMENTO, S.~C. do.
 
-\emph{{Um Framework Extensível para Interoperabilidade Dinâmica entre
-  Componentes Distribuídos}} --- Universidade Federal de Sergipe, Aracaju, SE,
+\emph{Um Framework Extens\'ivel para Interoperabilidade Din\^amica entre
+  Componentes Distribu\'idos} --- Universidade Federal de Sergipe, Aracaju, SE,
   Brasil, 2013.}
 
 \bibitem[{OASIS Open} 2011]{sca2007}
@@ -82,6 +193,32 @@ Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/1328671.1328672}.}
 {OMG. \emph{OMG CORBA component model (CCM) specification}.
 3.0. ed. Needham, 2002.}
 
+\bibitem[OMG 2012]{omg2012}
+\abntrefinfo{OMG}{OMG}{2012}
+{OMG. \emph{{Model Driven Architecture}}. 2012.
+Dispon{\'\i}vel em: \url{http://www.omg.org/mda/}. Acesso em: 16 jun. 2012.}
+
+\bibitem[Pressman 2011]{pressman2011}
+\abntrefinfo{Pressman}{PRESSMAN}{2011}
+{PRESSMAN, R.~S. \emph{Engenharia de Software: Uma Abordagem Profissional}. 7
+  ed.. ed. Porto Alegre, RS, Brasil: AMGH, 2011.
+ISBN 9788563308337. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=eRIOuQAACAAJ}.}
+
+\bibitem[Reilly e Reilly 2002]{reilly2002}
+\abntrefinfo{Reilly e Reilly}{REILLY; REILLY}{2002}
+{REILLY, D.; REILLY, M. \emph{Java network programming and distributed
+  computing}. ADDISON WESLEY Publishing Company Incorporated, 2002.
+ISBN 9780201710373. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=xKJQAAAAMAAJ}.}
+
+\bibitem[Rocha 2008]{rocha2008}
+\abntrefinfo{Rocha}{ROCHA}{2008}
+{ROCHA, T. da.
+\emph{{Servi\c{c}os de transa\c{c}\~ao abertos para ambientes din\^amicos}}.
+Tese (Doutorado) --- Instituto de Computa\c{c}\~ao, Universidade Estadual de
+  Campinas, Campinas, SP, Brasil, 2008.}
+
 \bibitem[Rouvoy e Merle 2009]{rouvoy2009}
 \abntrefinfo{Rouvoy e Merle}{ROUVOY; MERLE}{2009}
 {ROUVOY, R.; MERLE, P. {Leveraging component-based software engineering with
@@ -90,5 +227,37 @@ Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/1328671.1328672}.}
 ISSN 0003-4347.
 10.1007/s12243-008-0072-z.
 Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/s12243-008-0072-z}.}
+
+\bibitem[Ruixian 2000]{ruixian2000}
+\abntrefinfo{Ruixian}{RUIXIAN}{2000}
+{RUIXIAN, B. Distributed computing via rmi and corba.
+2000.
+Dispon{\'\i}vel em: \url{http://europepmc.org/abstract/CIT/497529}.}
+
+\bibitem[Sommerville 2011]{sommerville2011}
+\abntrefinfo{Sommerville}{SOMMERVILLE}{2011}
+{SOMMERVILLE, I. \emph{Engenharia de Software}. 9 ed.. ed. S\~ao Paulo, SP,
+  Brasil: Pearson Brasil, 2011.
+ISBN 9788579361081. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=H4u5ygAACAAJ}.}
+
+\bibitem[Szyperski 2002]{szyperski2002}
+\abntrefinfo{Szyperski}{SZYPERSKI}{2002}
+{SZYPERSKI, C. \emph{Component Software: Beyond Object-Oriented Programming}.
+  2nd. ed. Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc., 2002.
+ISBN 0201745720.}
+
+\bibitem[Tanenbaum e Steen 2007]{tanenbaum2007}
+\abntrefinfo{Tanenbaum e Steen}{TANENBAUM; STEEN}{2007}
+{TANENBAUM, A.; STEEN, M. van. \emph{Sistemas distribu{\'\i}dos:
+  princ{\'\i}pios e paradgmas}. 2 ed.. ed. Pearson Prentice Hall, 2007.
+ISBN 9788576051428. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=r2SGPgAACAAJ}.}
+
+\bibitem[W3C 2004]{w3c2004}
+\abntrefinfo{W3C}{W3C}{2004}
+{W3C, C. \emph{{Web Services Glossary}}. 2004.
+Dispon{\'\i}vel em: \url{http://www.w3.org/TR/2004/NOTE-ws-gloss-20040211/}.
+  Acesso em: 19 maio 2014.}
 
 \end{thebibliography}

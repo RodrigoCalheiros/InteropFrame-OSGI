@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.31)  11 JUN 2014 19:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.31)  1 JUL 2014 11:55
 entering extended mode
 **tcc.tex
-("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\tcc.tex"
+("C:\Users\Felipe\Desktop\Nova pasta (2)\tcc.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -477,24 +477,29 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
-Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
  ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count151
 \U@D=\dimen151
 )
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\portuges.ldf"
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip186
 \enit@outerparindent=\dimen152
 \enit@toks=\toks23
 \enit@inbox=\box29
 \enitdp@description=\count152
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count153
 \calc@Bcount=\count154
@@ -541,153 +546,247 @@ Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 \ABNTEXsignwidth=\skip193
 \ABNTEXsignthickness=\skip194
 \ABNTEXsignskip=\skip195
-)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-! LaTeX Error: Option clash for package babel.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 \usepackage
-               [latin1]{inputenc}
-The package babel has already been loaded with options:
-  [brazil]
-There has now been an attempt to load it with options
-  [brazilian,brazil]
-Adding the global options:
-  brazil,brazilian,brazil
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
-File: latin1.def 2008/03/30 v1.1d Input encoding file
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
-Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
- ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
-File: uni-global.def 2013/05/13 UCS: Unicode global data
-)
-\uc@secondtry=\count164
-\uc@combtoks=\toks26
-\uc@combtoksb=\toks27
-\uc@temptokena=\toks28
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\abntex2\abntex2cite.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\abntex2\abntex2abrev.sty")
-\minimumbiblabelwidth=\skip196
-\ABCIauxlen=\skip197
-\c@ABCIaux=\count165
-\c@ABCImax=\count166
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
-Package: relsize 2003/07/04 ver 3.1
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
 )
-\biblabelsep=\skip198
-LaTeX Info: Redefining \newblock on input line 672.
-LaTeX Info: Redefining \cite on input line 699.
-\ABCItoken=\toks29
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\arial\uarial.sty"
-Package: uarial 2006/03/21 1.0 (WaS)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
-File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip199
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
 
-For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks30
-\ex@=\dimen155
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen156
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
 )
-\inf@bad=\count167
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count168
-\leftroot@=\count169
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count170
-\DOTSCASE@=\count171
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box30
-\strutbox@=\box31
-\big@size=\dimen157
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count172
-\c@MaxMatrixCols=\count173
-\dotsspace@=\muskip11
-\c@parentequation=\count174
-\dspbrk@lvl=\count175
-\tag@help=\toks31
-\row@=\count176
-\column@=\count177
-\maxfields@=\count178
-\andhelp@=\toks32
-\eqnshift@=\dimen158
-\alignsep@=\dimen159
-\tagshift@=\dimen160
-\tagwidth@=\dimen161
-\totwidth@=\dimen162
-\lineht@=\dimen163
-\@envbody=\toks33
-\multlinegap=\skip200
-\multlinetaggap=\skip201
-\mathdisplay@stack=\toks34
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
  ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count179
+\Gread@gobject=\count164
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen164
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\fncychap\fncychap.sty"
-Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
-\RW=\skip202
-\mylen=\skip203
-\myhi=\skip204
-\px=\skip205
-\py=\skip206
-\pyy=\skip207
-\pxx=\skip208
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -700,326 +799,142 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen165
-\Gin@req@width=\dimen166
+\Gin@req@height=\dimen155
+\Gin@req@width=\dimen156
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
-Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
+\MT@toks=\toks26
+\MT@count=\count165
+LaTeX Info: Redefining \textls on input line 766.
+\MT@outer@kern=\dimen157
+LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
+\MT@listname@count=\count166
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
+File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip196
 )
+Package microtype Info: Loading configuration file microtype.cfg.
 
-! LaTeX Error: Option clash for package tocbibind.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 \usepackage
-                {type1cm}                    % fontes realmente escal√°veis
-The package tocbibind has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [nottoc]
-Adding the global options:
-  ,nottoc
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\type1cm\type1cm.sty"
-Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, patched RF)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\titlesec\titletoc.sty"
-Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen167
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\babelbib\babelbib.sty"
-Package: babelbib 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count180
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count181
-\float@exts=\toks35
-\float@box=\box32
-\@float@everytoks=\toks36
-\@floatcapt=\box33
-)
-
-Class memoir Warning: You are using the caption package with the memoir class. To prepare we will now reset all captioni
-ng macros and configurations to kernel defaults, and then let the caption package take over. Please remember to use the 
-caption package interfaces in order to configure your captions. .
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen168
-\captionmargin@=\dimen169
-\captionwidth=\dimen170
-\caption@tempdima=\dimen171
-\caption@indent=\dimen172
-\caption@parindent=\dimen173
-\caption@hangindent=\dimen174
-)
-\c@ContinuedFloat=\count182
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Package option `usenames' ignored on input line 216.
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 702.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\svgnam.def"
-File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
-Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count183
-\Gm@cntv=\count184
-\c@Gm@tempcnt=\count185
-\Gm@bindingoffset=\dimen175
-\Gm@wd@mp=\dimen176
-\Gm@odd@mp=\dimen177
-\Gm@even@mp=\dimen178
-\Gm@layoutwidth=\dimen179
-\Gm@layoutheight=\dimen180
-\Gm@layouthoffset=\dimen181
-\Gm@layoutvoffset=\dimen182
-\Gm@dimlist=\toks37
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-
-! LaTeX Error: Option clash for package hyperref.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...bookmarksopen=false]{hyperref} \usepackage
-                                                  {longtable}
-The package hyperref has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [pdftex,plainpages=false,pdfpagelabels,colorlinks=false,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black
-,bookmarksopen=false]
-Adding the global options:
-  ,pdftex,plainpages=false,pdfpagelabels,colorlinks=false,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black
-,bookmarksopen=false
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip209
-\LTright=\skip210
-\LTpre=\skip211
-\LTpost=\skip212
-\LTchunksize=\count186
-\LTcapwidth=\dimen183
-\LT@head=\box34
-\LT@firsthead=\box35
-\LT@foot=\box36
-\LT@lastfoot=\box37
-\LT@cols=\count187
-\LT@rows=\count188
-\c@LT@tables=\count189
-\c@LT@chunks=\count190
-\LT@p@ftn=\toks38
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count191
-\lst@gtempboxa=\box38
-\lst@token=\toks39
-\lst@length=\count192
-\lst@currlwidth=\dimen184
-\lst@column=\count193
-\lst@pos=\count194
-\lst@lostspace=\dimen185
-\lst@width=\dimen186
-\lst@newlines=\count195
-\lst@lineno=\count196
-\lst@maxwidth=\dimen187
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count197
-\lst@skipnumbers=\count198
-\lst@framebox=\box39
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2013/08/26 1.5b listings configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+("C:\Program Files\MiKTeX 2.9\tex\latex\abntex2\abntex2cite.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\abntex2\abntex2abrev.sty")
+\minimumbiblabelwidth=\skip197
+\ABCIauxlen=\skip198
+\c@ABCIaux=\count167
+\c@ABCImax=\count168
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\hypcap.sty"
-Package: hypcap 2011/02/16 v1.11 Adjusting the anchors of captions (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
-\fancy@headwidth=\skip213
-\f@ncyO@elh=\skip214
-\f@ncyO@erh=\skip215
-\f@ncyO@olh=\skip216
-\f@ncyO@orh=\skip217
-\f@ncyO@elf=\skip218
-\f@ncyO@erf=\skip219
-\f@ncyO@olf=\skip220
-\f@ncyO@orf=\skip221
-
-
-! LaTeX Error: Command \footruleskip already defined.
-               Or name \end... illegal, see p.192 of the manual.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.302 ...and{\footruleskip}{.3\normalbaselineskip}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+\biblabelsep=\skip199
+LaTeX Info: Redefining \newblock on input line 672.
+LaTeX Info: Redefining \cite on input line 699.
+\ABCItoken=\toks27
 )
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\spacefactor' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@m' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\spacefactor' on input line 127.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@m' on input line 127.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 127.
 \tcc@idxfile=\write4
-
 Writing index file tcc.idx 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 138.
+("C:\Users\Felipe\Desktop\Nova pasta (2)\tcc.aux"
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/elementospretextuais.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_I.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_II.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_III.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_IV.aux"))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 150.
 
-("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\tcc.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Try loading font information for T1+ua1 on input line 143.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\arial\t1ua1.fd"
-File: t1ua1.fd 2006/03/21 Fontinst v1.928 font definitions for T1/ua1.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 143.
-\AtBeginShipoutBox=\box40
-Package hyperref Info: Link coloring ON on input line 143.
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring ON on input line 150.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count199
+\c@section@level=\count169
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 143.
-LaTeX Info: Redefining \ref on input line 143.
-LaTeX Info: Redefining \pageref on input line 143.
-LaTeX Info: Redefining \nameref on input line 143.
-\myptabbox=\box41
-\myptabboxwidth=\skip222
-("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
-File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
-) ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Info: Redefining \nameref on input line 150.
+LaTeX Info: Redefining \ref on input line 150.
+LaTeX Info: Redefining \pageref on input line 150.
+LaTeX Info: Redefining \nameref on input line 150.
+\myptabbox=\box31
+\myptabboxwidth=\skip200
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 150.
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count200
-\scratchdimen=\dimen188
-\scratchbox=\box42
-\nofMPsegments=\count201
-\nofMParguments=\count202
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count203
-\MPscratchDim=\dimen189
-\MPnumerator=\count204
-\makeMPintoPDFobject=\count205
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count170
+\scratchdimen=\dimen158
+\scratchbox=\box32
+\nofMPsegments=\count171
+\nofMParguments=\count172
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count173
+\MPscratchDim=\dimen159
+\MPnumerator=\count174
+\makeMPintoPDFobject=\count175
+\everyMPtoPDFconversion=\toks29
 )
-babelbib: Set bibliography fall-back language to brazil
-("C:\Program Files\MiKTeX 2.9\tex\latex\babelbib\portuguese.bdf"
-File: portuguese.bdf 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
-
-babelbib extension \btxifchangecaseoff added to \extrasbrazil
-)
-babelbib: Load BibTeX extensions \bibsbrazil for brazil
-babelbib: Set language for keywords in the bibliography fixed to brazil
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hypcap package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: longtable package is loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
-Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
-)
-Package caption Info: End \AtBeginDocument code.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-21.28552pt
-* \headheight=14.5pt
-* \headsep=19.8738pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=42.9055pt
-* \marginparsep=7.0pt
-* \columnsep=10.0pt
-* \skip\footins=12.0pt plus 4.0pt minus 4.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-\c@lstlisting=\count206
-! Undefined control sequence.
-l.153 \onehalfspacing
-                       % espa√ßamento
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\capitulos/elementospretextuais.tex"
+LaTeX Info: Redefining \microtypecontext on input line 150.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ ("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/elementospretextuais.tex"
 
 ! LaTeX Error: Environment titlepage undefined.
 
@@ -1038,8 +953,6 @@ File: ufs.jpg Graphic file (type jpg)
  <use ufs.jpg>
 Package pdftex.def Info: ufs.jpg used on input line 10.
 (pdftex.def)             Requested size: 100.12381pt x 100.87662pt.
-LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 16.41594pt on input line 14.
 
 
 ! Class memoir Error: Font command \bf is not supported.
@@ -1052,15 +965,10 @@ l.16         {\bf
                   \LARGE Modulariza\c{c}\~ao e Extens\~ao do InteropFrame}\\
 Use \textbf, or \bfseries{...}, or the oldfontcommands option
 
-LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 19.70294pt on input line 16.
-LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 18.
 [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Felipe/Documents/GitHub/InteropFrame-OSGI/01-TCC LaTeX/uf
-s.jpg>]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Felipe/Desktop/Nova pasta (2)/ufs.jpg>]
 ! Undefined control sequence.
 l.52             \singlespacing
                                
@@ -1069,6 +977,26 @@ of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
+
+ []
 
 ! Undefined control sequence.
 l.55             \onehalfspacing
@@ -1079,14 +1007,18 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Underfull \hbox (badness 1107) in paragraph at lines 53--56
-\T1/ua1/m/n/12 Curso apre-sen-tado como re-qui-sito par-cial
- []
-
-[2]
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 56.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 56.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 56.
+ [2]
 ! Undefined control sequence.
-l.73             \singlespacing
+l.74             \singlespacing
                                
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1095,27 +1027,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 74--75
-\T1/ua1/m/n/12 Curso apre-sen-tado como re-qui-sito par-cial
- []
-
-
-Underfull \hbox (badness 1527) in paragraph at lines 74--75
-\T1/ua1/m/n/12 para ob-ten-Á„o do tÌ-tulo de Ba-cha-rel em
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 74--75
-\T1/ua1/m/n/12 Sis-te-mas de In-for-ma-Á„o da Uni-ver-si-dade
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 ! Undefined control sequence.
-l.76             \onehalfspacing
+l.77             \onehalfspacing
                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1130,131 +1047,176 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 \end{titlepage}
+l.105 \end{titlepage}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[3]
-LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 23.63593pt on input line 129.
-LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ua1/b/n' tried instead on input line 129.
-LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 129.
-LaTeX Font Info:    Font shape `T1/ua1/m/it' will be
-(Font)              scaled to size 11.39996pt on input line 131.
-LaTeX Font Info:    Font shape `T1/ua1/bx/n' in size <12> not available
-(Font)              Font shape `T1/ua1/b/n' tried instead on input line 138.
-LaTeX Font Info:    Font shape `T1/ua1/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 138.
+[3])
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 235.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 241.
+ [1
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--139
+] [2
 
- []
-
-("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\tcc.toc" [1
-
-]))
-! Undefined control sequence.
-l.165 \onehalfspacing
-                                   % espa√ßamento um e meio
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\capitulos/capitulo_I.tex" [2]
-
-LaTeX Warning: Citation `blair2011' on page iii undefined on input line 8.
-
-
-LaTeX Warning: Citation `inverardi2010' on page iii undefined on input line 8.
-
-
-LaTeX Warning: Citation `bromberg2011' on page iii undefined on input line 8.
-
-
-LaTeX Warning: Citation `rouvoy2009' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `coulson2008' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `bruneton2006' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `spring2007' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `ejb2005' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `osgi' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `ccm2002' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `sca2007' on page iii undefined on input line 10.
-
-
-LaTeX Warning: Citation `nascimento2013' on page iii undefined on input line 12.
-
-LaTeX Font Info:    Font shape `T1/ua1/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 15.
-[3
+] ("C:\Users\Felipe\Desktop\Nova pasta (2)\tcc.toc") [3
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ua1 on input line 27.
-LaTeX Font Info:    No file OMSua1.fd. on input line 27.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+)
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_I.tex"
+
+Package hyperref Warning: Suppressing empty link on input line 10.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 
+      [1
 
 
-LaTeX Font Warning: Font shape `OMS/ua1/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 27.
 
-LaTeX Font Info:    Font shape `T1/ua1/m/it' will be
-(Font)              scaled to size 9.49997pt on input line 39.
-[4])
-! Undefined control sequence.
-l.186 \backmatter \singlespacing
-                                   % espa√ßamento simples
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 27.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 40.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40 \end{itemize}
+                   [2])pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.299 \include{capitulos/capitulo_I}
+                                     [3] ("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_II.tex" [4
 
-("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\tcc.bbl" [5]
+
+
+]
+<figuras/001Interfacesdecomponentes.png, id=172, 395.4775pt x 98.3675pt>
+File: figuras/001Interfacesdecomponentes.png Graphic file (type png)
+ <use figuras/001Interfacesdecomponentes.png>
+Package pdftex.def Info: figuras/001Interfacesdecomponentes.png used on input line 23.
+(pdftex.def)             Requested size: 395.47653pt x 98.36723pt.
+
+[5 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/001Interfacesdecomponentes.png>] [6]
+<figuras/003opencom.png, id=211, 381.67593pt x 195.73125pt>
+File: figuras/003opencom.png Graphic file (type png)
+ <use figuras/003opencom.png>
+Package pdftex.def Info: figuras/003opencom.png used on input line 53.
+(pdftex.def)             Requested size: 381.675pt x 195.73076pt.
+ [7 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/003opencom.png>] <figuras/004fractal.png, id=233, 411.78844pt x 185.
+19188pt>
+File: figuras/004fractal.png Graphic file (type png)
+
+<use figuras/004fractal.png>
+Package pdftex.def Info: figuras/004fractal.png used on input line 70.
+(pdftex.def)             Requested size: 411.78741pt x 185.1914pt.
+
+
+LaTeX Warning: Citation `bruneton2007' on page 8 undefined on input line 75.
+
+[8 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/004fractal.png>]
+
+Package hyperref Warning: Suppressing empty link on input line 79.
+
+
+Package hyperref Warning: Suppressing empty link on input line 81.
+
+<figuras/005osgi.png, id=253, 341.77687pt x 202.50656pt>
+File: figuras/005osgi.png Graphic file (type png)
+ <use figuras/005osgi.png>
+Package pdftex.def Info: figuras/005osgi.png used on input line 93.
+(pdftex.def)             Requested size: 341.77603pt x 202.50604pt.
+
+
+Package hyperref Warning: Suppressing empty link on input line 94.
+
+
+Package hyperref Warning: Suppressing empty link on input line 94.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/005osgi.png>]
+<figuras/006InvocacaoRemotadeMetodos.png, id=288, 646.415pt x 463.7325pt>
+File: figuras/006InvocacaoRemotadeMetodos.png Graphic file (type png)
+ <use figuras/006InvocacaoRemotadeMetodos.png>
+Package pdftex.def Info: figuras/006InvocacaoRemotadeMetodos.png used on input line 119.
+(pdftex.def)             Requested size: 387.85199pt x 278.24164pt.
+
+[11 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/006InvocacaoRemotadeMetodos.png>]
+<figuras/007ArquiteturaemCamadasdaRMI.png, id=309, 616.3025pt x 441.65pt>
+File: figuras/007ArquiteturaemCamadasdaRMI.png Graphic file (type png)
+
+<use figuras/007ArquiteturaemCamadasdaRMI.png>
+Package pdftex.def Info: figuras/007ArquiteturaemCamadasdaRMI.png used on input line 128.
+(pdftex.def)             Requested size: 369.78435pt x 264.99203pt.
+ [12 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/007ArquiteturaemCamadasdaRMI.png>] [13]) [14] ("C:\Users\Felipe\Des
+ktop\Nova pasta (2)\capitulos/capitulo_III.tex" [15
+
+
+
+]
+<figuras/010InteropArquitetura.png, id=384, 909.3975pt x 377.91188pt>
+File: figuras/010InteropArquitetura.png Graphic file (type png)
+ <use figuras/010InteropArquitetura.png>
+Package pdftex.def Info: figuras/010InteropArquitetura.png used on input line 23.
+(pdftex.def)             Requested size: 454.69765pt x 188.95547pt.
+ [16 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/010InteropArquitetura.png>]
+<figuras/009Interop02.png, id=399, 909.3975pt x 359.84438pt>
+File: figuras/009Interop02.png Graphic file (type png)
+ <use figuras/009Interop02.png>
+Package pdftex.def Info: figuras/009Interop02.png used on input line 64.
+(pdftex.def)             Requested size: 454.69765pt x 179.92174pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/009Interop02.png>]
+<figuras/008Interop.png, id=415, 496.85625pt x 496.85625pt>
+File: figuras/008Interop.png Graphic file (type png)
+ <use figuras/008Interop.png>
+Package pdftex.def Info: figuras/008Interop.png used on input line 84.
+(pdftex.def)             Requested size: 347.797pt x 347.797pt.
+ [19 <C:/Users/Felipe/Desktop/Nova pasta (2)/figuras/008Interop.png>]
+
+Package hyperref Warning: Suppressing empty link on input line 95.
+
+) [20] ("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_IV.tex") [21
+
+
+
+]
+("C:\Users\Felipe\Desktop\Nova pasta (2)\tcc.bbl"
 bibitemlist
+[22
 
-! LaTeX Error: Command \textcent unavailable in encoding T1.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71   Componentes Distribu√≠dos}}
-                                   --- Universidade Federal de Sergipe, Arac...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[6
-
-]) [7]
+] [23]) 
+AED: lastpage setting LastPage
+[24]
 \tf@toc=\write5
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 201.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 201.
- ("C:\Users\Felipe\Documents\GitHub\InteropFrame-OSGI\01-TCC LaTeX\tcc.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 201.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 201.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+ ("C:\Users\Felipe\Desktop\Nova pasta (2)\tcc.aux"
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/elementospretextuais.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_I.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_II.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_III.aux")
+("C:\Users\Felipe\Desktop\Nova pasta (2)\capitulos/capitulo_IV.aux"))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 357.
 
 
 LaTeX Warning: There were undefined references.
@@ -1262,22 +1224,23 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 201.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 15840 strings out of 493921
- 229653 string characters out of 3147279
- 403068 words of memory out of 3000000
- 18865 multiletter control sequences out of 15000+200000
- 71422 words of font info for 55 fonts, out of 3000000 for 9000
+ 12705 strings out of 493921
+ 188780 string characters out of 3147279
+ 344823 words of memory out of 3000000
+ 15451 multiletter control sequences out of 15000+200000
+ 48205 words of font info for 205 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 39i,12n,43p,1213b,586s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,12n,35p,1172b,599s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/arial/ua1b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
-/arial/ua1r8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/arial/ua1ri8a.pfb>
-Output written on tcc.pdf (10 pages, 78931 bytes).
+cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on tcc.pdf (30 pages, 553525 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 602 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 24339 words of extra memory for PDF output out of 24883 (max. 10000000)
 

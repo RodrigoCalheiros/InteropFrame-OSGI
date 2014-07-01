@@ -1,98 +1,157 @@
-\chapter{Fundamentação}\label{chap:fundamentacao}
+\chapter{Conceitos Básicos}\label{chap:fundamentacao}
 
-Esta seção apresenta os fundamentos necessários para o entendimento da solução. Assim como apresenta uma breve descrição de IDEs existentes com suas qualidades e limitações.
+Com o objetivo de firmar o embasamento teórico do projeto e do aprimoramento do InteropFrame, serão elucidados neste capítulo os conceitos que foram utilizados no decorrer da pesquisa. Foram discutidos conceitos como Modularização, Componentes e Modelos de Componentes, Sistemas Distribuídos, Invocação Remota de Métodos, Serviços Web e Geração Automática de Código. Por fim, será feita uma breve discussão acerca dos conhecimentos elencados.
 
-\section{Desenvolvimento Baseado em Componentes} \label{sec.desvol_comp}
-
+\section{Modularização} \label{sec.modularizacao}
 	
-Para se tentar resolver a crescente dificuldade em se desenvolver softwares existem vários processos, sendo um deles o de dividir o desenvolvimento em partes menores. Partindo dessa ideia foi criado o conceito de componentes de software.
+Modularização significa a concepção de um sistema completo formado por módulos logicamente independentes \cite{hall2011}. Ela é capaz de reduzir a complexidade do problema, dividindo-o em subproblemas mais simples, ou seja, dividindo-o em módulos \cite{knuth1996}. Um módulo define um limite lógico executável. Dessa forma os detalhes internos dele não são visíveis a outros módulos ou sistemas. Os únicos detalhes visíveis são aqueles que ele expõe explicitamente, ou seja, a API pública \cite{hall2011}. Com isso é mais fácil de detectar problemas e resolvê-los, pois os módulos são, em princípio, independentes. Em sua característica um módulo é implementável, gerenciável, reutilizável, combinável e é uma unidade independente de software que provê interfaces a outros módulos ou sistemas \cite{kirk2012}.
 
-A Engenharia de Software Baseada em Componentes apresenta-se como um dos elementos chave na construção de middlewares e sistemas distribuídos. Flexibilidade e reusabilidade são algumas das principais vantagens na utilização de componentes, frameworks de componentes possibilitam que componentes sejam modificados ou substituídos em tempo de execução, garantindo assim a disponibilidade do sistema.
+É confuso o conceito de Modularização e Orientação a Objeto. Ambas suportam a especialização, ou seja, quebram o sistema em partes pequenas dando a cada uma delas a sua devida responsabilidade. Entretanto, elas atuam de formas diferentes. Com a orientação a objeto é possível modularizar de forma lógica, referenciando a visibilidade do código. Dessa forma a orientação a objeto utiliza parte do conceito de modularização em seu contexto. Porém, a modularização abrange mais que isso. Ela pode ser utilizada tanto da forma física, onde é possível subdividir o código em vários arquivos, entretanto mantendo as mesmas dependências e comunicação entre eles, quanto da forma lógica, como na orientação a objeto \cite{hall2011}.
 
-\subsection{Elementos da Arquietura Baseada em Componentes}
-
-A arquitetura baseada em componentes tem como elementos básicos: componentes, interfaces e contratos. 
-
-Componentes são definidos por (SZYPERSKI et al, 2008) como sendo unidades de composição com interfaces contratualmente especificadas e dependências de contexto explicitas, que podem ser implantados de maneira independente e estão sujeitos a composição por terceiros.
-
-Interfaces de componentes podem ser definidas como sendo uma especificação do seu ponto de acesso, ou seja, os clientes acessam por eles os serviços providos por um componente. Não contem nenhuma implementação e sim a listagem das operações e as descrições e os protocolos destas operações. Isso torna possível que se faça uma mudança somente na implementação sem que seja preciso alterar a sua interface e que sejam adicionadas novas interfaces sem que seja preciso modificar a implementação já existente do componente. Podem ser de dois tipos: providas e requeridas, que basicamente significa que a primeira especifica os serviços oferecidos pelo componente enquanto que a segunda os serviços requeridos pelo mesmo.
-
-Os contratos listam as restrições globais que os componentes terão, e também lista as pré e pós condições que precisam ser preenchidas para cada operação existente no componente. Isto pode ser considerado como sendo o comportamento de um componente. Servem também para definir o comportamento de um grupo de componentes que interagem entre si.
-
-\subsection{\textit{Framework} de Componentes}
-
-Um framework pode ser entendido como sendo um conjunto de classes que colaboram para realizar uma responsabilidade para um domínio de um subsistema da aplicação. Em relação aos frameworks de componentes eles podem ser entendidos como tendo uma arquitetura genérica e organizada que pode ser usada para a configuração da comunicação de componentes previamente existentes.
-
-A estrutura de uma aplicação baseada em componentes pode ser expressa usando uma ADL (Architecture Description Language). Por meio da ADL é possível descrever o software através da definição de componentes, suas conexões e relacionamentos entre eles. Estas linguagens diminuem a complexidade do software, permitindo que estas definições sejam realizadas em alto nível. Desempenhando assim um papel importante para o desenvolvimento de software de qualidade com a definição de propriedades estruturais no início do processo de desenvolvimento.
-
-Com a ampla adoção de engenharia de software baseada em componentes, diversas técnicas e ferramentas foram propostas, como também diversas ADLs surgiram. Isto acarreta que geralmente cada especificação de uma ADL seja especifica de um framework distinto, o que torna sua utilização em maior escala um pouco restrita. 
+A modularização ganhou a popularidade no início da década de 70, muito embora seja algo que ainda hoje não está tão presente nos requisitos não funcionais do desenvolvimento de software. Apesar disso é algo tão importante que traz grandes benefícios para a aplicação. Para isso é preciso aplicar os princípios de modularização para obter bons resultados. Princípios esses como alta coesão e baixo acoplamento. Com eles, uma das grandes vantagens que a modularização oferece é a reutilização. Isso se torna fácil quando um módulo é responsável por aquilo que realmente deve ser e não tem um grande número de dependências. A depender do \textit{framework} utilizado para a aplicar a modularização, a declaração das dependências pode ser feita de forma explícita como no OSGi. O que traz um ganho para a manutenção no código e para o melhor entendimento do mesmo \cite{hall2011}.
 
 
-\section{Programação Orientada a Atributos}
+\subsection{Componentes e Modelos de Componentes}
 
-A programação orientada a atributos (@OP) consiste numa técnica de marcação em nível de programa, ou seja, ela permite que programadores marquem elementos de um programa para indicar que eles mantêm semânticas especificas de aplicação ou domínio.
+A engenharia de software baseada em componentes surgiu como uma abordagem para softwares de desenvolvimento de sistemas com base no reúso de componentes de software \cite{sommerville2011}. \citeonline{pressman2011} menciona que componente é um bloco construtivo modular para software. Não existe consenso sobre um componente ser uma unidade independente de software que pode ser composta com outros componentes \cite{sommerville2011}. Segundo \apudonline{councill2001}{sommerville2011}, componente é um elemento de software que está de acordo com um modelo de componente padrão e pode ser independentemente implantado e composto de acordo com um padrão de composição. Entretanto, \apudonline{szyperski2002}{sommerville2011} menciona que um componente de software é uma unidade de composição de interfaces contratualmente especificadas e pode ser implantado de forma independente, além de estar sujeito a ser composto por parte de terceiros.
 
-É usado para ocultar detalhes da implementação, aumentando assim o nível de abstração de programação que ajuda a reduzir a complexidade, tornando a implementação de programas mais simples.
+Um componente funciona como um provedor de um ou mais serviços. Dessa forma, quando um sistema precisa de um serviço, ele chama um componente para fornecer esse serviço sem se preocupar onde esse componente está sendo executado, nem mesmo de características como linguagem de programação que o componente foi desenvolvido. Para isso, os componentes possuem dois tipos de interfaces relacionadas que refletem os serviços que o componente fornece (interface \textit{provides}) e os serviços que o componente necessita (interface \textit{requires}), como mostra a Figura \ref{fig:001 - Interfaces de componentes} \cite{sommerville2011}. De acordo com \citeonline{crnkovic2011}, uma interface de componente define um conjunto de propriedades funcionais de um componente.
 
-Um exemplo de uma linguagem orientada a atributos é a Java Annotation, que foi introduzida em 2004 na linguagem Java e passou a se popularizar depois da sua introdução na plataforma J2EE. As anotações em Java são como um tipo de metadados que permitem a programação orientada a atributos. Cada anotação pode conter atributos que podem ser tipos primitivos, enumerativos ou classes.
+	  
+\begin{figure}[!hp]
+	\centering
+		\includegraphics{figuras/001Interfacesdecomponentes.png}
+	\caption{Interfaces de componentes \cite{sommerville2011}}
+	\label{fig:001 - Interfaces de componentes}
+\end{figure}	
 
-As anotações podem ser processadas em tempo de compilação ou em tempo de execução. Java Annotation permite que o desenvolvedor defina uma política de retenção para anotações. Essa política é definida para especificar como uma anotação instanciada é mantida pelo Java. Três tipos de políticas podem ser usadas pelo Java, que são:
+Um modelo de componente é uma definição de normas para implementação, documentação e implantação de componentes que garantem a interoperabilidade deles \cite{sommerville2011}. Existem diversos modelos de componentes, entretanto neste trabalho serão abordados os modelos OpenCOM, Fractal e OSGi.
 
 
+\subsubsection{Modelo OpenCOM}
+
+O OpenCOM é um modelo de componentes de baixo peso projetado para o desenvolvimento de \textit{middlewares} em dispositivos de computação com poucos recursos (processamento, memória, armazenamento). Além de ser um modelo de baixo peso, o OpenCOM provê a capacidade de reconfiguração dinâmica de \textit{middlewares} tanto no domínio estrutural quanto no comportamental \cite{rocha2008}.
+
+O OpenCOM é fundamentado em três tecnologias \cite{nascimento2013}:
 \begin{itemize}
-	\item SOURCE: As informações da anotação são armazenadas apenas dentro do arquivo de origem, informações remanescentes são armazenadas em um arquivo de classe gerado a partir desse arquivo de origem;
-	\item CLASSE: As informações da anotação são armazenadas no arquivo da classe quando o código fonte é compilado, mas a informação não é carregada na memória como parte da definição de classe;
-	\item RUNTIME: Os dados de anotação são armazenados dentro do arquivo de classe carregado na memória quando a definição de classe é carregada.
+	\item Componentes - O modelo permite a especificação da estrutura de sistemas através do uso de componentes e conexões entre componentes (ROCHA, 2008).
+Os conceitos fundamentais no OpenCOM são interfaces, receptáculos e conexões. Uma interface representa uma unidade de provisão de serviços, enquanto que um receptáculo representa uma unidade de requerimento de serviços e é usado para tornar explícita a dependência de uma interface de um componente com outra. Uma conexão representa uma ligação entre um serviço fornecido por uma interface de um componente e um serviço requerido por um receptáculo de outro componente {clarke2001}; 
+	\item Reflexão computacional - O modelo OpenCOM foi projetado para suportar a reflexão computacional - que é a capacidade que um sistema tem de observar sua própria representação/estrutura e modifica-la em tempo de execução;
+	\item \textit{Frameworks} de componentes - Uma característica chave do OpenCOM é o uso da noção de \textit{frameworks} de componentes. Um \textit{framework} de componentes é definido no OpenCOM como um conjunto fortemente acoplado de componentes que coopera para resolver alguma área de interesse. O OpenCOM também fornece um protocolo de extensão bem definido para a aceitação de componentes adicionais que modificam ou estendem o comportamento do \textit{framework} de componentes, além de restringir o modo como os componentes são organizados \cite{coulson2008}.
 \end{itemize}
 
-\subsection{Fraclet}
+Cada componente OpenCOM implementa quatro interfaces, além de interfaces personalizadas, como mostra a Figura \ref{fig:003 - opencom} \apud{grace2007}{nascimento2013}:
+\begin{itemize}
+	\item ILifeCycle - fornece as operações para a inicialização e a finalização do ciclo de vida de um componente;
+	\item IConnections (opcional) - oferece os métodos para modificar as interfaces ligadas aos receptáculos de um componente. Esta interface deve ser implementada por todos os componentes que possuem receptáculo;
+	\item IMetaInterface - suporta a inspeção dos tipos de interfaces e receptáculos declarados pelo componente;
+	\item IUnknown - é equivalente à interface do mesmo nome no Microsoft COM, isto é, é usada para obter a referência para a interface solicitada na instância do componente.
+\end{itemize}
 
-O Fraclet é um modelo de programação para diversos modelos de componentes. Ele é composto por vários conceitos chaves pré-existentes, onde cada conceito contem sua respectiva anotação, mas não somente limitadas a elas já que cada desenvolvedor pode criar novas anotações.
-
-Seu funcionamento se baseia na transformação do código fonte do programador em código fonte Java e descrições XML. A partir desse código é possível gerar componentes de tecnologias diferentes, a depender do interpretador de código.
-
-%Uma desvantagem porém é que o Fraclet não fornece recursos para lidar com a comunicação entre objetos distribuídos e nem mecanismo para interoperabilidade entre componentes de mesmo heterogêneos.
-O Fraclet é baseado em uma abordagem genérica que representa conceitos relacionados a modelos de componentes. Nesta abordagem cada conceito chave de componente previamente identifi?cado é defi?nido como uma anotação aplicável para uma parte do código do programa. O núcleo do Fraclet possui identi?cação dos seguintes conceitos chave: componente, interface provida, interface requerida, atributo, serviço, ciclo de vida e dados.
-
-\section{IDEs para especificação de arquiteturas baseada em componentes} \label{sec.ide_comp}
-
-Apesar de vários artigos existentes sobre desenvolvimento baseado em componentes, ainda é escassa a existência de ferramentas que ajudem os desenvolvedores a criar sistemas em alto nível. 
-
-Algumas ferramentas encontradas são aqui descritas.
-
-%Nesta seção serão apresentadas algumas ferramentas que propuseram um ambiente em alto nível para definição da arquitura de distemas baseado em componentes.
-
-\subsection{SAVE-IDE}
-
-No trabalho (SENTILLES et. al., 2009), foi apresentada a SAVE-IDE. Criada com a finalidade de desenvolver sistemas embarcados confiáveis e integrá-los com o desenvolvimento baseado em componentes. Prove suporte ao desenvolvimento baseado no modelo de componentes SaveCCM, que é um modelo especifico para criação de sistemas embarcados.
-
-A geração automática se da através de 3 passos: geração, síntese e compilação em tempo de execução. No primeiro passo o modelo SaveCCM é transformado em arquivos auxiliares de formato XML de acordo com a linguagem SaveCCM. Durante esse passo o usuário cria modelos de códigos fonte para cada componente, onde o comportamento do componente pode ser implementado.
-
-No passo da síntese o modelo de componente SaveCCM é transformado no modelo de execução. 	No ultimo passo o ambiente de compilação em tempo de execução é acionado e o arquivo executável pode ser impresso no hardware alvo ou executado por um simulador.
-
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[keepaspectratio=true,scale=0.65]{Imagens/Capitulo_II/SAVE-IDE.png}
-  \caption{Ambiente do SAVE-IDE}\label{fig.saveide}
+\begin{figure}[!hp]
+	\centering
+		\includegraphics{figuras/003opencom.png}
+	\caption{Interfaces dos metamodelos do OpenCOM \cite{rocha2008}}
+	\label{fig:003 - opencom}
 \end{figure}
 
-A abordagem proposta por este modelo de componente e sua IDE se baseia na apresentação de um ambiente (Figura \ref{fig.saveide}), onde seja possível o desenvolvimento de sistemas embarcados baseados em componentes e que se baseia em uma abordagem que enfatiza uma modelagem comportamental formal e na geração automática do executável.
+O OpenCOM implanta um substrato padrão em \textit{runtime} que está disponível em todo o espaço de endereçamento. Insto é implementado através de um componente \textit{singleton} chamado ``OpenCOM'' que exporta uma interface chamada IOpenCOM. O papel do \textit{runtime} do OpenCOM é o de gerir um repositório de componentes disponíveis e, assim, permitir a criação e exclusão de componentes. Além disso, a interface IOpenCOM serve como um ponto centralizado para a submissão de todas as solicitações de conexão ou desconexão entre receptáculos e interfaces no seu espaço de endereçamento. Para facilitar a reconfiguração, o \textit{runtime} registra cada criação e exclusão de cada componente ou conexão em um espaço de meta-estrutura chamado de \textit{system graph} (grafo do sistema). Isto permite que o OpenCOM suporte consultas que, através de um identificador de conexão, fornece detalhes sobre o receptáculo e as interfaces participantes da conexão, juntamente com detalhes de seus componentes que os implementam \cite{clarke2001}.
 
-\subsection{Plugin para Eclipse}
-No trabalho (RIBA; CERVANTES, 2007) foi apresentado o processo de desenvolvimento de uma ferramenta MDA para a construção de aplicações orientadas a serviços baseadas em componentes. A ferramenta foi planejada para simplificar o desenvolvimento de componentes, fazendo com que após eles fossem modelados a ferramenta se encarregaria de validar a modelagem baseado na especificação contida na ferramenta.
+\subsubsection{Modelo Fractal}
 
-A ferramenta proposta fornece um maneira de desenvolver componentes como um modelo visual, para posterior transformação em um Modelo de plataforma específica. Esta, é usada como sendo um plugin da IDE de programação Eclipse, o que implica que é preciso ter outro programa instalado previamente. Além dessa pequena limitação outra de maior impacto é que ela prove suporte apenas a plataforma OSGi. A figura \ref{fig.plugin}, apresenta o ambiente de desenvolvimento.
+O Fractal é definido em \cite{bruneton2006} como um modelo de componentes geral e extensível, projetado para implementar, implantar e gerenciar sistemas de software complexos, incluindo, em particular, sistemas operacionais e \textit{middlewares}. As principais motivações do modelo são: (i) Composição de componentes, onde um componente pode conter outros componentes, permitindo uma visão uniforme das aplicações em vários níveis de abstração; (ii) Compartilhamento de componentes entre estruturas compostas de componentes, como forma de compartilhar recursos enquanto se mantém o encapsulamento de um componente; (iii) Capacidades reflexivas, para monitorar e controlar um sistema em execução; (iv) Capacidades de reconfiguração, como forma de implantar e configurar dinamicamente um sistema.
 
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-	\includegraphics[width=0.99\textwidth]{Imagens/Capitulo_II/plugin.png}
-  %\includegraphics[keepaspectratio=false,scale=0.99]{Imagens/Capitulo_II/plugin.png}
-  \caption{Ambiente do SAVE-IDE}\label{fig.plugin2}
+De acordo com \citeonline{coupaye2007}, o modelo de componentes Fractal suporta várias linguagens de programação, como por exemplo, Java e C, e de forma experimental .NET, SmallTalk, Python e C++.
+
+No contexto do Fractal os componentes são entidades de \textit{runtime} que estão em conformidade com o modelo, estão encapsuladas, possuem identificações únicas e suportam uma ou mais interfaces. As interfaces são os pontos únicos de interação entre os componentes e expressam a dependência desses em termos de interfaces requeridas e providas. Os \textit{bindings} são os canais de comunicação entre as interfaces dos componentes \cite{coupaye2007} \cite{bruneton2006}.
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics{figuras/004fractal.png}
+	\caption{Estrutura de um componente Fractal \apud{bruneton2006}{nascimento2013}.}
+	\label{fig:004 - fractal}
 \end{figure}
 
+Um componente Fractal é a composição de uma membrana e um conteúdo, como pode ser observado na Figura \ref{fig:004 - fractal}. A membrana tem o papel de fornecer interfaces para um controle reflexivo sobre o conteúdo. O conteúdo consiste num conjunto finito de outros subcomponentes. A membrana de um componente pode ter interfaces internas, acessíveis somente pelos subcomponentes internos, e externas, acessíveis de fora do componente. Além disso, uma membrana possui diversas interfaces de controle, que atuam como interceptadores entre as operações de chamada que entram e saem do componente, e adicionam comportamentos aos manipuladores de tais operações \cite{bruneton2007}.
 
-A ferramenta possui validação para após o modelo criado verificar se as restrições estão sendo respeitadas. Em seguida o usuário desenvolvedor deve solicitar a transformação de componentes, neste momento a ferramenta cria os componentes automaticamente, implementando o código técnico do modelo de componentes OSGI.
+\subsubsection{Modelo OSGi}
 
+Segundo \citeonline{osgi}, o OSGi é um conjunto de especificações que definem um sistema de componentes dinâmico para o Java. Com essas especificações é possível criar um sistema composto dinamicamente por diversos componentes reusáveis. O OSGi permite que os componentes escondam suas implementações de outros componentes enquanto se comunicam através de serviços. Os serviços são objetos compartilhados de maneira especifica entre componentes.
 
+A arquitetura do OSGi é composta por camadas como mostra a Figura \ref{fig:005 - osgi}. Elas são brevemente descritas a seguir \cite{osgi}:
+\begin{itemize}
+	\item \textit{Bundles} - Os \textit{bundles} são os componentes OSGi implementados pelos desenvolvedores.
+	\item \textit{Services} - A camada de Serviços conecta os \textit{bundles} de maneira dinâmica. Os serviços são publicados pelos \textit{bundles}, e são passíveis posteriormente de busca e conexão.
+	\item \textit{Life-Cycle} - Parte da API do OSGi que permite a instalar, desinstalar, executar, parar, e atualizar \textit{bundles}.
+	\item \textit{Modules} - Camada que define como um \textit{bundle} pode importar e exportar código.
+	\item \textit{Security} - Camada que manipula os aspectos de segurança do OSGi.
+	\item \textit{Execution Environment} - É o ambiente de execução. Define quais métodos e classes estarão disponíveis na plataforma específica.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics{figuras/005osgi.png}
+	\caption{Camadas da arquitetura OSGi \cite{osgi}.}
+	\label{fig:005 - osgi}
+\end{figure}
+
+O OSGi é apenas uma especificação de um \textit{framework} para o desenvolvimento de aplicações modulares. Existem diversas implementações dessa tecnologia, sendo as mais conhecidas: Equinox, Felix e Knopflerfish. A primeira é uma implementação da especificação OSGi desenvolvida pela Eclipse Foundation. Ela é utilizada em diversas aplicações, inclusive na IDE Eclipse. Já a implementação Felix é desenvolvida e mantida pela Apache Software Foundation. A implementação Knopflerfish é desenvolvida e mantida pela Makewave.
+
+\section{Sistemas Distribuídos}
+
+Um sistema distribuído é aquele no qual os componentes localizados em computadores interligados em rede se comunicam e coordenam suas ações apenas passando mensagens \cite{coulouris2007}. \citeonline{tanenbaum2007} definem um sistema distribuído como uma coleção de computadores independentes que aparece para o usuário como um único sistema. \citeonline{sommerville2011} menciona que os sistemas distribuídos são mais complexos que os sistemas centralizados, o que os torna mais difíceis de projetas, implementar e testar. Apesar dessa complexidade, praticamente todos os grandes sistemas computacionais são distribuídos. 
+
+\apud{coulouris2007}{sommerville2011} identifica vantagens da utilização de uma abordagem distribuída no desenvolvimento de sistemas:
+\begin{itemize}
+	\item Compartilhamento de recursos: Um sistema distribuído permite o compartilhamento de recursos de hardware e software.
+	\item Abertura: Os sistemas distribuídos são projetados para protocolos-padrão que permitem que os equipamentos e software de diferentes fornecedores sejam combinados.
+	\item Concorrência: Em um sistema distribuído, vários processos podem operar simultaneamente em computadores separados na rede.
+	\item Escalabilidade: Em princípio, os recursos de um sistema distribuído podem ser aumentados pela adição de novos recursos a depender da necessidade do sistema.
+	\item Tolerância a defeitos: Um sistema distribuído pode ser tolerante a algumas falhas de hardware e software dispondo de vários computadores e replicando as informações importantes para o sistema.
+\end{itemize}
+
+\section{Invocação Remota de Métodos (RMI)}
+
+A RMI é uma extensão da invocação a método local que permite a um objeto que está em um processo invocar os métodos de um objeto que está em outro processo \cite{coulouris2007}. \apudonline{harold2004}{nascimento2013} menciona que a diferença entre objetos remotos e objetos locais é que os objetos remotos estão localizados em máquinas virtuais diferentes, assim como na Figura \ref{fig:006 - rmi}. Devido à possibilidade de falhas independentes dos objetos invocadores e invocados, as RMIs têm semânticas diferentes das invocações a métodos locais, onde a transparência total não é necessariamente desejável \cite{coulouris2007}.
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[scale=0.6]{figuras/006InvocacaoRemotadeMetodos.png}
+	\caption{Invocação Remota de métodos \cite{reilly2002}.}
+	\label{fig:006 - rmi}
+\end{figure}
+
+De acordo com \citeonline{reilly2002}, cada serviço RMI é definido por uma interface que descreve os métodos dos objetos que podem ser chamados remotamente. Segundo \citeonline{nascimento2013} e \citeonline{reilly2002}, essa interface deve ser compartilhada por todos os desenvolvedores uma vez que eles são incentivados a definir os métodos que podem ser chamados remotamente antes mesmo da implementação. \citeonline{nascimento2013} menciona que várias implementações da interface podem ser criadas, e os desenvolvedores não precisam estar cientes de que a implementação está sendo usada e nem aonde está localizada.
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[scale=0.6]{figuras/007ArquiteturaemCamadasdaRMI.png}
+	\caption{Arquitetura em Camadas da RMI \cite{ruixian2000}.}
+	\label{fig:007 - rmi}
+\end{figure}
+
+Segundo \citeonline{ruixian2000}, a arquitetura do RMI baseia-se em quatro camadas, assim como a Figura \ref{fig:007 - rmi}: Camada de Aplicação, Camada de \textit{Proxy}, Camada de Referência Remota e Camada de Transporte.
+
+A camada de mais alto nível, a de aplicação, é onde encontram-se as implementações das aplicações tanto do lado cliente quanto do lado servidor. A segunda delas, a camada de \textit{proxy}, é responsável pelas chamadas aos objetos remotos. Nela é feito o empacotamento do parâmetros e o retorno do objeto. Para isso o lado cliente e o lado servidor assumem papéis diferentes. O primeiro é representado por \textit{Stub}, já o segundo é representado por \textit{Skeleton}. Em seguida vem a terceira camada, a de referência remota. Nela é feita a abstração entre a Camada de \textit{Proxy} e a Camada de Transporte. Por fim vem a camada de transporte que define uma conexão entre as máquinas cliente e servidor \cite{ruixian2000}.
+
+\section{Serviços Web}
+
+Um serviço web (\textit{web service}) fornece uma interface de serviço que permite aos clientes interagirem com servidores de uma maneira mais geral do que acontece com os navegadores web \cite{coulouris2007}. De acordo com \citeonline{deitel2010}, um serviço web é um componente de software armazenado em um computador que pode ser acessado por um aplicativo(ou outro componente de software) em outro computador por uma rede. Um serviço web possui uma interface descrita em um formato processável por máquina, especificamente a WSDL (\textit{Web Services Definition Language}). Outros sistemas interagem com um \textit{Web Service} utilizando mensagens de acordo com um padrão, tipicamente utilizando HTTP com uma serialização de XML, além de outros padrões relacionados a Web.
+
+Os clientes acessam as operações na interface de um serviço web por meio de requisições e respostas formatadas em XML (\textit{Extensible Markup Language}) e, normalmente, transmitidas por HTTP (\textit{HyperText Transfer Protocol}) \cite{w3c2004}. A XML é uma representação textual que, embora mais volumosa do que as representações alternativas, foi adotada por sua legibilidade e pela consequente facilidade de depuração \cite{coulouris2007} De acordo com \citeonline{deitel2010}, o serviço web pode ser apoiado em duas arquiteturas. A primeira é baseada no \textit{Simple Object Access Protocol} (SOAP) e a segunda é baseada no \textit{Representational State Transfer} (REST).
+
+Segundo \citeonline{sommerville2011}, SOAP é um padrão de trocas de mensagem que oferece suporte à comunicação entre serviços. O SOAP é um protocolo independente de plataforma que utiliza a XML para fazer chamadas de procedimento remoto, geralmente sobre o HTTP \cite{deitel2010}. De acordo com \citeonline{coulouris2007}, originalmente o protocolo SOAP era baseado apenas em HTTP, mas a versão atual é projetada para usar uma variedade de protocolos de transporte, incluindo o SMTP, TCP ou UDP.
+
+Segundo \citeonline{deitel2010}, o REST refere-se a um estilo arquitetônico de implementar serviços Web. REST é uma estratégia com um estilo de operações muito restrito, no qual os clientes usam URLs e as operações HTTP, GET, PUT, DELETE e POST para manipular recursos representados em XML \cite{fielding2000}. Segundo \citeonline{deitel2010}, o REST também não está limitado a retornar dados no formato XML. Ele pode utilizar vários formatos, como XML, JSON, HTML, texto sem formatação e arquivos de mídia.
+
+\section{Geração Automática de Código}
+
+Um gerador de código é um sistema desenvolvido para criar automaticamente código fonte de alto nível em linguagens de programação como .NET, C++, C\#, Java e outros \cite{adamatii2006}. A geração automática de código ajuda a aumentar a eficácia da produção de software complexo, reduzindo o custo e tempo associado com o esforço de codificação \cite{kornecki2006}. Segundo \citeonline{adamatii2006}, é possível criar, a partir de um banco de dados, objetos de acesso à base de dados, telas para consulta, pesquisa e edição de dados e toda a base para um sistema, restando à equipe de desenvolvimento, implementar regras de negócio e especialização das funcionalidades. Com isso, um gerador de código automático pode trazer vantagens como qualidade no código, consistência, produtividade e abstração.
+
+Algumas plataformas utilizam mecanismos ou ferramentas para automação de geração de código para melhorar a produtividade e eficiência nos processos de desenvolvimento de software, como por exemplo, O MDA (\textit{Model-driven Architecture}) \cite{omg2012} - que é uma abordagem para desenvolvimento de sistemas dirigido a modelos e o Acceleo \cite{acceleo2012} - que é um \textit{plug-in} do Eclipse que baseado em MDA permite a geração automática de código a partir de modelos, como por exemplo, um modelo UML ou um metamodelo definido pelo usuário.
+
+\section{Discussão}
+
+A proposta de extensão e modularização do InteropFrame exige conhecimentos diversos que foram elencados nesse capítulo. Mais especificamente foi observado o conceito de modularização, como forma de reconstruir o InteropFrame de forma modular utilizando a distribuição Equinox do OSGi. Além disso, será feita a extensão do \textit{framework} para o suporte ao modelo de componentes OSGi de forma interoperável dentro da ferramenta.
+
+Além da proposta de modularização, o módulo Configurador Distribuído, que será apresentado no capítulo 3, será refeito a partir de soluções existentes no OSGi, que utilizam conceitos de comunicação remota.

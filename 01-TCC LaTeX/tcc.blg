@@ -1,10 +1,26 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: tcc.aux
+A level-1 auxiliary file: capitulos/elementospretextuais.aux
+A level-1 auxiliary file: capitulos/capitulo_I.aux
+A level-1 auxiliary file: capitulos/capitulo_II.aux
+A level-1 auxiliary file: capitulos/capitulo_III.aux
+A level-1 auxiliary file: capitulos/capitulo_IV.aux
 The style file: abntex2-alf.bst
 Database file #1: abntex2-options.bib
 Database file #2: referencias.bib
+Warning--entry type for "w3c2004" isn't style-file defined
+--line 299 of file referencias.bib
 Warning--entry type for "osgi" isn't style-file defined
---line 306 of file referencias.bib
+--line 307 of file referencias.bib
+Warning--entry type for "ecf2014" isn't style-file defined
+--line 367 of file referencias.bib
+Warning--entry type for "omg2012" isn't style-file defined
+--line 389 of file referencias.bib
+Warning--entry type for "acceleo2012" isn't style-file defined
+--line 397 of file referencias.bib
+Warning--I didn't find a database entry for "bruneton2007"
 Warning--campo year vazio ou faltando em osgi
+Warning--faltando school em fielding2000
+Warning--campo year vazio ou faltando em ecf2014
 You can't pop an empty literal stack for entry nascimento2013
 while executing---line 2217 of file abntex2-alf.bst
 +---------------------------------------------------------+

@@ -1,0 +1,102 @@
+\chapter{Solução Proposta}\label{chap:solucao}
+
+Neste capítulo será apresentado inicialmente o InteropFrame em sua implementação atual. Em seguida será apresentada a solução proposta para lidar com as limitações do InteropFrame, além de uma proposta de extensão para o suporte ao modelo de componentes OSGi dentro da ferramenta.
+
+\section{InteropFrame}
+
+Segundo \citeonline{nascimento2013}, o papel do \textit{framework} InteropFrame é o de prover uma solução de \textit{binding} (interconexão) transparente entre componentes distribuídos de modelos diferentes. Ele possibilita que os componentes envolvidos na construção de aplicações distribuídas interajam através dos mecanismos de interoperabilidade providos pelo \textit{framework}.
+
+Com o InteropFrame é possível tornar interoperáveis sistemas desenvolvidos nos modelos de componentes OpenCOM e Fractal. Esta interoperabilidade pode ocorrer tanto em sistemas locais, como também com partes distribuídas pela rede. O \textit{binding} remoto entre os componentes é suportado através dos mecanismos Java RMI e \textit{Web Services SOAP}.
+
+A Figura \ref{fig:010 - interop} apresenta a arquitetura do InteropFrame. A seguir são explicados os módulos dessa arquitetura \cite{nascimento2013}:
+\begin{itemize}
+	\item Configurador Distribuído (CD) - módulo responsável pelo gerenciamento do serviço de interoperabilidade entre os componentes distribuídos. Este módulo coordena e controla as operações dos demais módulos do \textit{framework} distribuído;
+	\item \textit{Plug-ins} de Modelos de Componentes (PMC) - cada \textit{plug-in} permite que o InteropFrame suporte um modelo de componentes específico. Um \textit{Plug-in} de modelo de componente é composto pelos seguintes submódulos:
+	\item Gerador de \textit{Proxies} (GP) - responsável pela geração automática dos \textit{proxies} que possibilitam a interoperabilidade entre os componentes distribuídos de modelos diferentes. Este módulo baseia-se na geração de código a partir de \textit{templates} pré-definidos para cada modelo de componentes específico;
+	\item Montador de \textit{Proxies} (MP) - responsável pela execução sob demanda dos \textit{proxies} criados pelo GP, bem como a disponibilização do serviço de interoperabilidade entre os componentes distribuídos;
+	\item Repositório de \textit{Proxies} (RP) - repositório para armazenamento dos \textit{proxies} gerados pelo GP.
+	\item \textit{Plug-ins} de Geradores de \textit{Bindings} (GB) - cada \textit{plug-in} gerador de \textit{binding} é responsável pela geração automática do código-fonte de um tipo diferente de \textit{binding} entre componentes remotos. O módulo Gerador de \textit{Proxies} faz uso de um tipo específico de Gerador de \textit{Binding} para enxertar nos \textit{proxies} o código que promove a interconexão remota.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[scale=0.5]{figuras/010InteropArquitetura.png}
+	\caption{Arquitetura do InteropFrame \cite{nascimento2013}.}
+	\label{fig:010 - interop}
+\end{figure}
+
+A Figura \ref{fig:009 - interop02} mostra o funcionamento do InteropFrame. Neste cenário o usuário deseja interconectar os componentes ``A'' e ``B'', desenvolvidos respectivamente em OpenCOM e Fractal. O componente ``A'' é tratado aqui como componente cliente pois requisita os serviços do componente servidor ``B'' de modo remoto.
+
+O detalhamento deste processo de funcionamento para o exemplo da Figura \ref{fig:009 - interop02} é descrito a seguir \cite{nascimento2013}:
+
+- Do lado do componente cliente
+\begin{itemize}
+	\item (1C) O Configurador Distribuído (CD) verifica se o \textit{proxy} do lado cliente, necessário para promover a interoperabilidade, já se encontra no Repositório de \textit{Proxies} (RP), caso contrário ele solicita a geração do mesmo no passo 2C. Caso o componente \textit{proxy} já exista, o próximo passo será o 5C, onde esse componente será utilizado pelo Montador de \textit{Proxies} (MP);
+
+	\item (2C) O CD solicita ao submódulo Gerador de \textit{Proxies} (GP) do modelo de componentes OpenCOM para gerar automaticamente o código do componente ``X'' que representa o \textit{proxy} do lado cliente;
+
+	\item (3C) O GP solicita ao submódulo Gerador de \textit{Bindings} (GB) do RMI para gerar automaticamente a parte do código do componente ``X'' responsável pela comunicação remota;
+
+	\item (4C) O GP armazena no RP o componente ``X'' gerado;
+
+	\item (5C) O CD solicita ao MP que proceda com a inicialização do \textit{proxy} do lado cliente;
+
+	\item (6C) O MP obtém e inicializa o componente ``X'' do lado cliente no ambiente de execução OpenCOM conectando o receptáculo do componente ``A'' à interface provida do \textit{proxy} ``X''. O \textit{proxy} ``X'' do lado cliente representa o componente ``B'' no lado cliente e tem seus serviços requisitados pelo componente ``A''.
+\end{itemize}
+
+- Do lado do componente servidor
+\begin{itemize}
+	\item (1S) O Configurador Distribuído (CD) verifica se o \textit{proxy} do lado servidor já se encontra no Repositório de \textit{Proxies} (RP), caso contrário ele solicita a geração do mesmo no passo 2S. Caso o componente \textit{proxy} já exista, o próximo passo será o 5S, onde esse componente será utilizado pelo Montador de \textit{Proxies} (MP);
+
+	\item (2S) O CD solicita ao submódulo GP do modelo de componentes Fractal para gerar automaticamente o código do componente ``Y'' que representa o \textit{proxy} (também chamado de \textit{skeleton}) do lado servidor;
+
+	\item (3S) O GP solicita ao submódulo GB do RMI para gerar automaticamente a parte do código do componente ``Y'' responsável pela comunicação remota;
+
+	\item (4S) O GP armazena no RP o componente ``Y'' gerado;
+
+	\item (5S) O CD solicita ao MP que proceda com a inicialização do \textit{proxy} do lado servidor;
+
+	\item (6S) O MP obtém e inicializa o componente ``Y'' do lado servidor no ambiente de execução Fractal conectando o receptáculo do \textit{proxy} ``Y'' à interface provida do componente ``B''. O \textit{proxy} ``Y'' do lado servidor representa o componente ``A'' no lado servidor que requisita os serviços do componente ``B''.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[scale=0.5]{figuras/009Interop02.png}
+	\caption{Funcionamento do InteropFrame \cite{nascimento2013}.}
+	\label{fig:009 - interop02}
+\end{figure}
+
+Com o \textit{binding} executado, o componente ``A'' agora pode utilizar os serviços do componente ``B'' de forma transparente. Quando uma requisição é feita no componente ``A'' ela é repassada via RMI do componente \textit{proxy} ``X'' para o componente \textit{skeleton} ``Y'' e este por sua vez repassa para o componente ``B''. A resposta dessa requisição é feita pelo caminho inverso, de ``B'' para ``Y'', de ``Y'' para ``X'' e de ``X'' para ``A''. Na prática, ``A'' e ``X'' são componentes do modelo OpenCOM, assim como ``B'' e ``Y'' são do modelo Fractal. Os componentes ``X'' e ``Y'' se comunicam através de RMI, garantindo assim a interoperabilidade entre os componentes ``A'' e ``B''.
+
+\section{Modularização do InteropFrame}
+
+O InteropFrame foi desenvolvido em Java ``puro'', de forma a permitir a extensibilidade para novos modelos de componentes e de \textit{bindings}. Cada \textit{plug-in} de modelo de componentes ou de \textit{binding} fornece o suporte a um modelo de componentes ou de \textit{binding} específico. Com o desenvolvimento de novos \textit{plug-ins} a ferramenta passa a suportar novos modelos.
+
+Segundo \citeonline{hall2011} o Java provê alguns aspectos de modularização através da orientação a objetos, porém não foi proposto para suportar modularização de alta granularidade. {hall2011} ainda cita algumas limitações do Java no quesito modularização:
+\begin{itemize}
+	\item Baixo nível de controle de visibilidade de código: Os modificadores de acesso do Java (\textit{public, protected e private}) tratam em baixo nível o encapsulamento da orientação a objetos e não no nível de particionamento lógico do sistema. Em Java, um \textit{package} (pacote) é tipicamente utilizado para particionar código. Para este código ser visível por um outro \textit{package}, ele deve ser declarado como \textit{public}. Algumas vezes, a estrutura lógica da aplicação faz chamadas a códigos de \textit{packages} diferentes, significando que qualquer dependência entre os pacotes deve ser exposta como \textit{public}. Dessa maneira, os detalhes de implementação tornam-se públicos, dificultando a evolução do sistema devido a possível criação de dependências da API não pública.
+	\item Conceito de \textit{Classpath} propenso a erros: Aplicações são compostas de várias versões de bibliotecas e componentes. O \textit{Classpath} do Java não lida com versões de código, retornando assim o primeiro que encontra. O modo de construção do \textit{Classpath} não permite especificar versões de um mesmo código. Em Java apenas se vai colocando as bibliotecas (comumente arquivos JAR) até que a JVM (Java Virtual Machine) pare de acusar erros sobre classes faltantes.
+	\item Implantação limitada e suporte a gerenciamento: Não há maneira fácil em Java de se implantar um conjunto particular de dependências de código versionadas e executar a aplicação. Também é dificultada a evolução da aplicação e seus componentes após a implantação. O Java não possui um suporte direto à criação de \textit{plug-ins} dinâmicos, o que é conseguido apenas através do uso de \textit{Class Loaders} - mecanismos de baixo nível e propensos a erros.
+\end{itemize}
+
+\begin{figure}[!h]
+	\centering
+		\includegraphics[scale=0.7]{figuras/008Interop.png}
+	\caption{Bundles do InteropFrame em OSGi}
+	\label{fig:008 - interop}
+\end{figure}
+
+Tendo em vista as limitações do Java, necessita-se de uma maneira mais eficiente para a modularização do InteropFrame. A proposta deste trabalho consiste na adoção do OSGi como plataforma de modularização. A extensibilidade do InteropFrame passará a ter um suporte facilitado, uma vez que a aplicação será desenvolvida em \textit{bundles} independentes como mostra a Figura \ref{fig:008 - interop}. Cada \textit{Plug-in} de Modelo de Componente e seus respectivos submódulos seriam portados para \textit{bundles} OSGi individuais. Da mesma forma, cada Gerador de \textit{Binding} também se tornaria um \textit{bundle} independente, bem como o núcleo do InteropFrame e o Configurador Distribuído.
+
+\section{Solução de comunicação do Configurador Distribuído}
+
+O Configurador Distribuído, módulo responsável pelo gerenciamento entre as partes distribuídas do InteropFrame, é desenvolvido utilizando a tecnologia Java RMI. O Configurador Distribuído atua na comunicação remota entre os lados servidor e cliente do InteropFrame. O lado servidor é responsável por propagar pela rede uma interface provida de um componente de um dado sistema. O lado cliente faz a utilização desse serviço fornecido pelo lado servidor.
+
+Para garantir uma comunicação distribuída de forma modular, este trabalho propõe a adoção da comunicação remota baseada no ECF (\textit{Eclipse Communication Framework}) para a implementação do Configurador Distribuído. O ECF consiste num conjunto \textit{frameworks} para a construção de servidores distribuídos e aplicações. Provê implementação modular do padrão de serviços remotos do OSGi, juntamente ao suporte para \textit{Web Services REST} \cite{ecf2014}.
+
+\section{Extensão para o modelo de componentes OSGi}
+
+Além da modularização utilizando o OSGi, também é proposto neste trabalho a extensão para o suporte ao modelo de componentes OSGi dentro do InteropFrame.
+
+Após a portabilidade do InteropFrame para a plataforma OSGi, será criado um novo \textit{plug-in} para que o \textit{framework} passe a suportar o OSGi como um modelo de componentes interoperável com os já existentes (OpenCOM e Fractal). Essa proposta tem como objetivo avaliar o processo de desenvolvimento de um novo \textit{plug-in} de modelo de componentes.
+

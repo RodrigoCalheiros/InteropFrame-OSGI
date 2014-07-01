@@ -1,0 +1,5 @@
+\chapter{Considerações Finais}\label{chap:consideracoes}
+
+O InteropFrame é uma solução que auxilia na resolução de problemas relacionados à interoperabilidade entre componentes distribuídos de modelos heterogêneos. Porém, essa solução está apenas limitada aos modelos OpenCOM e Fractal, além de promover a comunicação remota apenas utilizando Java RMI ou \textit{Web Service SOAP}. Outra limitação é que o InteropFrame foi desenvolvido em Java ``puro'', o que dificulta a sua extensibilidade. Outro problema do InteropFrame é a sua comunicação interna (entre os lados cliente e servidor), que é feita através de Java RMI.
+
+Este trabalho propõe uma possível solução para essa limitação através da utilização do OSGi como forma de modularizar o InteropFrame, além da extensão para o OSGi como um modelo de componentes interoperável dentro da ferramenta. Também propõe a resolução dos problemas relacionados à comunicação interna através dos mecanismos de comunicação providos pelo \textit{Eclipse Communication Framework}. Dessa forma, o InteropFrame torna-se mais extensível, coeso e desacoplado.
